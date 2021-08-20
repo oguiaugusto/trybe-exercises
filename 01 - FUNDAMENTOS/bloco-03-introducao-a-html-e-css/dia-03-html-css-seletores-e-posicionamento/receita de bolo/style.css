@@ -1,0 +1,35 @@
+  h1 {
+    color: darkred
+  }
+
+  h2 {
+    color: brown;
+    font-size: 2em;
+  }
+
+  p {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  body {
+    background-color: #E6E2B6;
+    font-size: 15px;
+  }
+  
+  #preparo {
+    font-weight: bold;
+  }
+
+  .estiloDeParagrafo {
+    font-family: monospace;
+  }
+
+  #ingredientes {
+    font-style: italic;
+    line-height: 30px;
+  }
+
+  #informacoes {
+    text-align: center;
+    text-decoration: underline;
+  }
