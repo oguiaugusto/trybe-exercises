@@ -1,0 +1,14 @@
+body {
+  font-family: 'roboto slab', sans-serif;
+  margin: 0;
+}
+
+header {
+  font-size: 20px;
+  background-color: rgb(236, 180, 76);
+  padding: 12px 10px 12px 20px;
+}
+
+main {
+  margin-left: 5%;
+}
