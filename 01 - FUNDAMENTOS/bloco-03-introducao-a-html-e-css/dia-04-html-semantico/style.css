@@ -6,6 +6,7 @@
 .header {
   background-color: rgb(60, 59, 139);
   color: white;
+  margin-bottom: 20px;
 }
 
 #header-title {
@@ -27,4 +28,43 @@
 .navigation ul li a {
   text-decoration: none;
   color:white;
+}
+
+main {
+  margin-left: 5%;
+}
+
+#general-information-title {
+  margin-top:5px;
+  margin-bottom: 5px;
+}
+
+.general-information {
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+.animal-name {
+  text-align: center;
+}
+
+.scientific-classification {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  border: 1px solid black;
+  background-color: #ececec;
+}
+
+table, tr, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 3px 20px 3px 5px;
+}
+
+.table-header {
+  background-color: rgb(182, 236, 181);
 }
