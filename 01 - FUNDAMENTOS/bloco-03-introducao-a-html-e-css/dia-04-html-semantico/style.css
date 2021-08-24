@@ -72,6 +72,7 @@ td {
 .paragraph-text {
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-right: 5%;
 }
 
 .facts {
@@ -88,7 +89,8 @@ td {
 }
 
 .biblio-reference li {
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
+  margin-top: 5px;
   list-style-type: square;
   color: rgb(37, 36, 82);
 }
@@ -100,4 +102,41 @@ td {
 
 .biblio-reference li a:visited {
   color: rgb(46, 46, 46);
+}
+
+#more-information {
+  margin-bottom: 30px;
+  float: right;
+  width: auto;
+  margin-right: 0px;
+  padding: 15px 70px 15px 30px;
+  background-color: rgb(60, 59, 139);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+footer {
+  clear: right;
+}
+
+#more-information h4{
+  color: white;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.aside-link {
+  color: white;
+}
+
+#footer {
+  background-color: rgb(60, 59, 139);
+  padding: 12px 10px 12px 10px;
+  border-top: 2px solid rgb(37, 36, 82);
+  margin-top: 0;
+}
+
+#footer p {
+  color: white;
+  text-align: center;
 }
