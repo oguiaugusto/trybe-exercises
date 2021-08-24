@@ -68,3 +68,12 @@ td {
 .table-header {
   background-color: rgb(182, 236, 181);
 }
+
+.paragraph-text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.facts {
+  margin-bottom: 40px;
+}
