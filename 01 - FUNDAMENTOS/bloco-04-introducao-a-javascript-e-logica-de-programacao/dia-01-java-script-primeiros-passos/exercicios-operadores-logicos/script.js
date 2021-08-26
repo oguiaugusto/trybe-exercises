@@ -35,11 +35,16 @@
 //  - Se for algum dia de fim de semana, imprima "FINALMENTE, descando merecido UwU".
 // Experimente trocar o valor da string ou até mesmo montar seu próprio algoritmo. Esse assunto é muito importante para seu aprendizado :).
 
-let weekDay = "sábado"
+// let weekDay = "sábado"
 
-if (weekDay == "segunda-feira" || weekDay == "terça-feira" || weekDay == "quarta-feira" || weekDay == "quinta-feira" || weekDay == "sexta-feira") {
-  console.log("Oba, mais um dia de aprendizado na Trybe");
-}
-else {
-  console.log("FINALMENTE, descanso merecido UwU.");
-}
+// if (weekDay == "segunda-feira" || weekDay == "terça-feira" || weekDay == "quarta-feira" || weekDay == "quinta-feira" || weekDay == "sexta-feira") {
+//   console.log("Oba, mais um dia de aprendizado na Trybe");
+// }
+// else {
+//   console.log("FINALMENTE, descanso merecido UwU.");
+// }
+
+// console.log(!42); // false
+
+// console.log(!0); // true
+// O número 0 tem o valor "falsy" no javascript. Logo, seu oposto é true.
