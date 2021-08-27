@@ -10,10 +10,11 @@
 // 6. Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";
 // 7. Utilizando for , descubra qual o menor valor contido no array e imprima-o;
 // 8. Utilizando for , crie um array que vá de 1 até 25 e imprima o resultado;
+// 9. Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2.
 
 let numbers = [];
 
 for (let i = 1; i <= 25; i += 1) {
-  numbers.push(i);
+  numbers.push(i / 2);
 }
 console.log(numbers);
