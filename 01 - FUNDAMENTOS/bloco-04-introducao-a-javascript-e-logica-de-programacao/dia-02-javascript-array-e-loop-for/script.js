@@ -1,5 +1,5 @@
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let lowerNumber = numbers[0];
+// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+// let lowerNumber = numbers[0];
 
 // 1. Nesse primeiro exercício, percorra o array imprimindo todos os valores nele contidos com a função console.log();
 // 2. Para o segundo exercício, some todos os valores contidos no array e imprima o resultado;
@@ -9,10 +9,11 @@ let lowerNumber = numbers[0];
 // 5. Utilizando for , descubra qual o maior valor contido no array e imprima-o;
 // 6. Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";
 // 7. Utilizando for , descubra qual o menor valor contido no array e imprima-o;
+// 8. Utilizando for , crie um array que vá de 1 até 25 e imprima o resultado;
 
-for (let i = 1; i < numbers.length; i += 1) {
-  if (numbers[i] < lowerNumber) {
-    lowerNumber = numbers[i];
-  }
+let numbers = [];
+
+for (let i = 1; i <= 25; i += 1) {
+  numbers.push(i);
 }
-console.log(lowerNumber);
+console.log(numbers);
