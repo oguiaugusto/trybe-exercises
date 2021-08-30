@@ -135,3 +135,16 @@ function notaEmPorcentagem(nota) {
   return result;
 }
 console.log(notaEmPorcentagem(12));
+
+// Exercício 8
+function algumNumeroPar(a, b, c) {
+  let result = "";
+  if (a % 2 === 0 || b % 2 === 0 || c % 2 === 0) {
+    result = "true";
+  }
+  else {
+    result = "false";
+  }
+  return result;
+}
+console.log(algumNumeroPar(54, 45, 4));
