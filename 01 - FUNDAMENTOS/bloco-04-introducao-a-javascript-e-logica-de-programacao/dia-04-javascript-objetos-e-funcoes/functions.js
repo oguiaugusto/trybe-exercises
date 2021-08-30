@@ -148,3 +148,31 @@ function algumNumeroPar(a, b, c) {
   return result;
 }
 console.log(algumNumeroPar(54, 45, 4));
+
+// Exercício 9
+function algumNumeroImpar(a, b, c) {
+  let result = "";
+  if (a % 2 !== 0 || b % 2 !== 0 || c % 2 !== 0) {
+    result = "true";
+  }
+  else {
+    result = "false";
+  }
+  return result;
+}
+console.log(algumNumeroImpar(12, 38, 4));
+
+// Exercício 10
+function calculoDoLucro(valorCusto, valorVenda) {
+  let result = "";
+  const valorCustoTotal = valorCusto + (valorCusto * 20 / 100);
+  const lucro = valorVenda - valorCustoTotal
+  if (valorCusto >= 0 && valorVenda >= 0) {
+    result = ("Lucro de mil produtos:", lucro * 1000);
+  }
+  else {
+    result = "Erro: Seus valores de entrada não podem ser menores que zero";
+  }
+  return result;
+}
+console.log(calculoDoLucro(100, 200));
