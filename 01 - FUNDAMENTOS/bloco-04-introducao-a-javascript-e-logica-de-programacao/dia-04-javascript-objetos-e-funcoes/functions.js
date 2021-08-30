@@ -176,3 +176,51 @@ function calculoDoLucro(valorCusto, valorVenda) {
   return result;
 }
 console.log(calculoDoLucro(100, 200));
+
+// Exercício 11
+function calcularSalarioLiquido(salarioBruto) {
+  let aliquotaInss;
+  let valorIr;
+  let salarioMenosInss;
+
+  if (salarioBruto <= 1556.94) {
+    aliquotaInss = salarioBruto / 100 * 8;
+    salarioMenosInss = salarioBruto - aliquotaInss;
+  }
+  else if (salarioBruto >= 1556.95 && salarioBruto <= 2594.92) {
+    aliquotaInss = salarioBruto / 100 * 9;
+    salarioMenosInss = salarioBruto - aliquotaInss;
+  }
+  else if (salarioBruto >= 2594.93 && salarioBruto <= 5189.82) {
+    aliquotaInss = salarioBruto / 100 * 11;
+    salarioMenosInss = salarioBruto - aliquotaInss;
+  }
+  else if (salarioBruto > 5189.82) {
+    aliquotaInss = 570.88;
+    salarioMenosInss = salarioBruto - aliquotaInss;
+  }
+  else {
+  }
+
+  if (salarioMenosInss < 1903.98) {
+    valorIr = 0;
+  }
+  else if (salarioMenosInss >= 1903.99 && salarioMenosInss <= 2826.65) {
+    valorIr = (salarioMenosInss * 0.075) - 142.80;
+  }
+  else if (salarioMenosInss >= 2826.66 && salarioMenosInss <= 3751.05) {
+    valorIr = (salarioMenosInss * 0.15) - 354.80;
+  }
+  else if (salarioMenosInss >= 3751.06 && salarioMenosInss <= 4664.68) {
+    valorIr = (salarioMenosInss * 0.225) - 636.13;
+  }
+  else if (salarioMenosInss > 4664.68) {
+    valorIr = (salarioMenosInss * 0.275) - 869.36;
+  }
+  else {
+  }
+
+  let salarioLiquido = salarioMenosInss - valorIr;
+  return salarioLiquido;
+}
+console.log("Salário Líquido:", calcularSalarioLiquido(3000));
