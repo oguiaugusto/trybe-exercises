@@ -78,3 +78,60 @@ function trianguloValido(primeiroValorTriangulo, segundoValorTriangulo, terceiro
   return result;
 }
 console.log(trianguloValido(45, 45, 100));
+
+// Exercício 6
+function quaisMovimentos(pecaXadrez) {
+  let pecaXadrezSwitch = pecaXadrez.toLowerCase();
+  let result = "";
+
+  switch (pecaXadrezSwitch) {
+    case "torre":
+      result = "A Torre se move para frente ou para os lados.";
+      break;
+    case "cavalo":
+      result = "O Cavalo se move em L para qualquer direção.";
+      break;
+    case "bispo":
+      result = "O Bispo se move nas diagonais.";
+      break;
+    case "rainha":
+    case "dama":
+      result = "A Dama/Rainha se move para todas as direções (frente, costa, esquerda, direita e diagonais.";
+      break;
+    case "rei":
+      result = "O Rei se move para todas as direções, porém apenas uma casa por vez.";
+      break;
+    case "peão":
+      result = "O Peão se move apenas uma casa para frente e captura a peça pela diagonal. Ele pode se mover duas casas para frente se estiver em sua posição inicial.";
+      break;
+    default:
+      result = "Erro: peça inválida";
+  }
+  return result;
+}
+console.log(quaisMovimentos("rei"));
+
+// Exercício 7
+function notaEmPorcentagem(nota) {
+  let result = "";
+  if (nota >= 90) {
+    result = "A";
+  }
+  else if (nota >= 80) {
+    result = "B";
+  }
+  else if (nota >= 70) {
+    result = "C";
+  }
+  else if (nota >= 60) {
+    result = "D";
+  }
+  else if (nota >= 50) {
+    result = "E";
+  }
+  else {
+    result = "F";
+  }
+  return result;
+}
+console.log(notaEmPorcentagem(12));
