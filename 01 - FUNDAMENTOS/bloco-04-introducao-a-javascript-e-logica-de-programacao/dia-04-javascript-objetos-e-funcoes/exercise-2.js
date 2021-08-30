@@ -37,3 +37,24 @@ function biggersIndex(array) {
   }
 }
 console.log(biggersIndex([2, 3, 6, 7, 10, 1]))
+
+// 3 - Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+function smallersIndex(array) {
+  if (Array.isArray(array) === true && array.length > 0) {
+    let smallerNumber = array[0];
+    for (let i in array) {
+      let currentNumber = array[i];
+      if (currentNumber < smallerNumber) {
+        smallerNumber = currentNumber;
+      }
+    }
+    return array.indexOf(smallerNumber);
+  }
+  else if (Array.isArray(array) === true && array.length === 0) {
+    return "Você precisa inserir algum numero no array";
+  }
+  else {
+    return "Você precisa inserir um array"
+  }
+}
+console.log(smallersIndex([2, 4, 6, 7, 10, 0, -3]));
