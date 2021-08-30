@@ -46,3 +46,35 @@ function biggerThanAnd(a, b, c) {
   return result;
 }
 console.log(biggerThanAnd(20, 7, 16));
+
+// Exercício 4
+function positiveOrNegative(number) {
+  let result = "";
+  if (number > 0) {
+    result = "o número " + number + " é positivo";
+  }
+  else if (number < 0) {
+    result = "o número " + number + " é negativo";
+  }
+  else {
+    result = "o número zero é neutro";
+  }
+  return result;
+}
+console.log(positiveOrNegative(0));
+
+// Exercício 5
+function trianguloValido(primeiroValorTriangulo, segundoValorTriangulo, terceiroValorTriangulo) {
+  let result = "";
+  if (primeiroValorTriangulo + segundoValorTriangulo + terceiroValorTriangulo === 180) {
+    result = "True. Você tem um triângulo.";
+  }
+  else if (primeiroValorTriangulo + segundoValorTriangulo + terceiroValorTriangulo < 0) {
+    result = "Ângulo Inválido. Tente novamente.";
+  }
+  else {
+    result = "False. Opa, o que seria isso?";
+  }
+  return result;
+}
+console.log(trianguloValido(45, 45, 100));
