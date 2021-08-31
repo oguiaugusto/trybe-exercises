@@ -1,3 +1,8 @@
+// Função espaço entre os exercicios
+function spaceBetweenExercises() {
+  console.log(" ---===--- ")
+}
+
 // 1 - Crie uma função que receba uma string e retorne true se for um palíndromo , ou false , se não for.
 function verifyPalindrome(word) {
   let backwardLetters = [];
@@ -17,6 +22,7 @@ function verifyPalindrome(word) {
 }
 console.log(verifyPalindrome('arara'));
 
+spaceBetweenExercises();
 // 2 - Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
 function biggersIndex(array) {
   if (Array.isArray(array) === true && array.length === 0) {
@@ -38,6 +44,7 @@ function biggersIndex(array) {
 }
 console.log(biggersIndex([2, 3, 6, 7, 10, 1]))
 
+spaceBetweenExercises();
 // 3 - Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
 function smallersIndex(array) {
   if (Array.isArray(array) === true && array.length > 0) {
@@ -59,6 +66,7 @@ function smallersIndex(array) {
 }
 console.log(smallersIndex([2, 4, 6, 7, 10, 0, -3]));
 
+spaceBetweenExercises();
 // 4 - Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
 function moreCharacters(name) {
   if (Array.isArray(name) === true && name.length > 0) {
@@ -94,3 +102,24 @@ function moreCharacters(name) {
   }
 }
 console.log(moreCharacters(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+spaceBetweenExercises();
+// 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+function mostRepeatedNumber(numbers) {
+  let mostRepeatedNumber;
+  let biggestNumberOfRepeats = 0;
+  for (let index in numbers) {
+    let numberOfRepeats = 0;
+    for (let repeats in numbers) {
+      if (numbers[index] === numbers[repeats]) {
+        numberOfRepeats += 1;
+      }
+    }
+    if (numberOfRepeats > biggestNumberOfRepeats) {
+      mostRepeatedNumber = numbers[index];
+      biggestNumberOfRepeats = numberOfRepeats;
+    }
+  }
+  return mostRepeatedNumber;
+}
+console.log(mostRepeatedNumber([2, 3, 2, 5, 8, 2, 3]));
