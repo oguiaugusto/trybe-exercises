@@ -123,3 +123,14 @@ function mostRepeatedNumber(numbers) {
   return mostRepeatedNumber;
 }
 console.log(mostRepeatedNumber([2, 3, 2, 5, 8, 2, 3]));
+
+spaceBetweenExercises();
+// 6 - Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
+function sumOneToN(n) {
+  let sum = 0;
+  for (let index = 1; index <= n; index += 1) {
+    sum += index;
+  }
+  return sum;
+}
+console.log(sumOneToN(5));
