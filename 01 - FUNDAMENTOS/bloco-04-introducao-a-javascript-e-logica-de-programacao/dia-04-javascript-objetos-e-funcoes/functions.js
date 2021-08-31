@@ -223,4 +223,8 @@ function calcularSalarioLiquido(salarioBruto) {
   let salarioLiquido = salarioMenosInss - valorIr;
   return salarioLiquido;
 }
+<<<<<<< HEAD
 console.log("Salário Líquido:", calcularSalarioLiquido(3000));
+=======
+console.log("Salário Líquido:", calcularSalarioLiquido(3000));
+>>>>>>> 4312cdc7862aa99ae91e25c373d3a3ce7833b6a5
