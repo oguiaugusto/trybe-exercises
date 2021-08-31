@@ -58,3 +58,39 @@ function smallersIndex(array) {
   }
 }
 console.log(smallersIndex([2, 4, 6, 7, 10, 0, -3]));
+
+// 4 - Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+function moreCharacters(name) {
+  if (Array.isArray(name) === true && name.length > 0) {
+    let moreCharacters;
+    let moreCharactersArray;
+    let biggestNOfCharacters = 0;
+    for (let index in name) {
+      let currentNOfCharacters = 0;
+      for (let letters of name[index]) {
+        currentNOfCharacters += 1;
+      }
+      if (currentNOfCharacters > biggestNOfCharacters && currentNOfCharacters !== biggestNOfCharacters) {
+        moreCharacters = name[index];
+        moreCharactersArray = [moreCharacters]
+        biggestNOfCharacters = name[index].length;
+      }
+      else if (currentNOfCharacters === biggestNOfCharacters) {
+        moreCharactersArray.push(name[index]);
+      }
+    }
+    if (moreCharactersArray.length > 1) {
+      return moreCharactersArray;
+    }
+    else {
+      return moreCharacters;
+    }
+  }
+  else if (Array.isArray(name) === true && name.length === 0) {
+    return "Você precisa inserir algum nome no array";
+  }
+  else {
+    return "Você precisa inserir um array"
+  }
+}
+console.log(moreCharacters(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
