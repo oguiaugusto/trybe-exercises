@@ -134,3 +134,22 @@ function sumOneToN(n) {
   return sum;
 }
 console.log(sumOneToN(5));
+
+spaceBetweenExercises();
+// 7 - Crie uma função que receba uma string word e outra string ending . Verifique se a string ending é o final da string word . Considere que a string ending sempre será menor que a string word.
+function verifyWordEnding(word, ending) {
+  let matchingLetters = 0;
+  for (let index = 1; index <= ending.length; index += 1) {
+    if (word[((word.length - 1) - ending.length + index)] === ending[index - 1]) {
+      matchingLetters += 1;
+    }
+  }
+  if (matchingLetters === ending.length) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+console.log(verifyWordEnding('trybe', 'be'));
+console.log(verifyWordEnding('joaofernando', 'fernan'));
