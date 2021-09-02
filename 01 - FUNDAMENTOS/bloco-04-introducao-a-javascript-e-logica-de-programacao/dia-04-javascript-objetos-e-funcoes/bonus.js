@@ -48,3 +48,37 @@ function arrayOfNumbers(vector) {
   return evenNumbers;
 }
 console.log(arrayOfNumbers([[1, 2], 3, 4, 5, 6, [7,8,9,10]]));
+
+// 3 - A partir do array de frutas basket , retorne um objeto que contenha o nome da fruta como chave e a quantidade de vezes que ela aparece no array como valor. Por exemplo, o array ['Melancia', 'Abacate', 'Melancia', 'Melancia', 'Uva'], deverá retornar { Melancia: 3, Abacate: 1, Uva: 1 } quando passado como argumento para a função.
+// Em seguida, imprima esse resultado na tela com uma mensagem no seguinte formato: Sua cesta possui: x Melancias, x Abacates...
+// function returnFruitsBasket(basket) {
+//   let result = 'Sua cesta possui: ';
+//   let fruits = {};
+//   let fruitsNames = [];
+//   for (let i = 0; i < basket.length; i += 1) {
+//     for (let secondI = 0; secondI < basket.length; secondI += 1) {
+//       if (basket[i] !== fruitnam[secondI]) {
+//         fruitsNames.push(basket[i]);
+//       }
+//     }
+//   }
+//   for (let i = 0; i < basket.length; i += 1) {
+//     fruits[`${basket[i]}`] += 1;
+//     currentNumber = fruits[`${basket[i]}`];
+//   }
+//   for (let i = 0; i < fruits.length - 1; i += 1) {
+//     if (i > fruits.length - 2) {
+//       result += (fruits[i] + ' ' + fruitsNames[i] + ' e ');
+//     } else {
+//       result += (fruits[i] + ' ' + fruitsNames[i]) + ', ';
+//     }
+//   }
+//   result += (fruits[fruits.length - 1]) + ' ' + (fruitsNames[fruitsNames - 1]);
+//   return result;
+// }
+// console.log(returnFruitsBasket(['Melancia', 'Abacate', 'Melancia', 'Melancia', 'Uva']));
+
+// let obj = {};
+// obj.hi = 1;
+// obj.hi += 2;
+// console.log(obj);
