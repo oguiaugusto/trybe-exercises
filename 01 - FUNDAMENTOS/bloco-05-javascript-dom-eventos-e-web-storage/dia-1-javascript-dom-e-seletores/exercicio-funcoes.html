@@ -75,12 +75,18 @@
         title.innerText = text;
         return title;
       }
-      function turnToUpperCase(tag) {
-        let toUpper = document.getElementsByTagName(tag);
+      function turnPTagToUpperCase() {
+        let toUpper = document.getElementsByTagName('p');
         for (let i = 0; i < toUpper.length; i += 1) {
           toUpper[i].style.textTransform = 'uppercase';
         }
         return toUpper;
+      }
+      function showPTagContent() {
+        const tagContent = document.getElementsByTagName('p');
+        for (let i = 0; i < tagContent.length; i += 1) {
+          console.log(tagContent[i].innerHTML);
+        }
       }
     </script>
   </body>
