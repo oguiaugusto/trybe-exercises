@@ -75,6 +75,13 @@
         title.innerText = text;
         return title;
       }
+      function turnToUpperCase(tag) {
+        let toUpper = document.getElementsByTagName(tag);
+        for (let i = 0; i < toUpper.length; i += 1) {
+          toUpper[i].style.textTransform = 'uppercase';
+        }
+        return toUpper;
+      }
     </script>
   </body>
 </html>
