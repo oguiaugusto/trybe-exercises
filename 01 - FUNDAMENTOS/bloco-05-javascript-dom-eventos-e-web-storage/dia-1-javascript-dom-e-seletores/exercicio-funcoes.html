@@ -17,6 +17,7 @@
 
       .main-content {
         background-color: yellow;
+        text-align: center;
       }
 
       .main-content .center-content {
@@ -54,6 +55,11 @@
     5 - Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
     6 - Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
+      function changeDescription(text) {
+        let description = document.getElementById('description');
+        description.innerText = text;
+        return description;
+      }
     </script>
   </body>
 </html>
