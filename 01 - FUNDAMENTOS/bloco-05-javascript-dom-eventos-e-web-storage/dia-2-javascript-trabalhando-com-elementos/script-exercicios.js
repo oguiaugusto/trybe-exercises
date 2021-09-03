@@ -66,7 +66,7 @@ let mainTag = document.querySelector('.main-content');
 mainTag.removeChild(sectionTwo);
 
 // 4. Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section;
-
+sectionThree.style.marginRight = 'auto';
 
 // 5. Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
 
