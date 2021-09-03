@@ -51,34 +51,67 @@ console.log(arrayOfNumbers([[1, 2], 3, 4, 5, 6, [7,8,9,10]]));
 
 // 3 - A partir do array de frutas basket , retorne um objeto que contenha o nome da fruta como chave e a quantidade de vezes que ela aparece no array como valor. Por exemplo, o array ['Melancia', 'Abacate', 'Melancia', 'Melancia', 'Uva'], deverá retornar { Melancia: 3, Abacate: 1, Uva: 1 } quando passado como argumento para a função.
 // Em seguida, imprima esse resultado na tela com uma mensagem no seguinte formato: Sua cesta possui: x Melancias, x Abacates...
-// function returnFruitsBasket(basket) {
-//   let result = 'Sua cesta possui: ';
-//   let fruits = {};
-//   let fruitsNames = [];
-//   for (let i = 0; i < basket.length; i += 1) {
-//     for (let secondI = 0; secondI < basket.length; secondI += 1) {
-//       if (basket[i] !== fruitnam[secondI]) {
-//         fruitsNames.push(basket[i]);
-//       }
-//     }
-//   }
-//   for (let i = 0; i < basket.length; i += 1) {
-//     fruits[`${basket[i]}`] += 1;
-//     currentNumber = fruits[`${basket[i]}`];
-//   }
-//   for (let i = 0; i < fruits.length - 1; i += 1) {
-//     if (i > fruits.length - 2) {
-//       result += (fruits[i] + ' ' + fruitsNames[i] + ' e ');
-//     } else {
-//       result += (fruits[i] + ' ' + fruitsNames[i]) + ', ';
-//     }
-//   }
-//   result += (fruits[fruits.length - 1]) + ' ' + (fruitsNames[fruitsNames - 1]);
-//   return result;
-// }
-// console.log(returnFruitsBasket(['Melancia', 'Abacate', 'Melancia', 'Melancia', 'Uva']));
+function isAlready(array, index, secondArray) {
+  let alreadyIs = false;
+  for (let i = 0; i < array.length; i += 1) {
+    if (index === secondArray[i]) {
+      alreadyIs = true;
+      break;
+    }
+  }
+  return alreadyIs;
+}
 
-// let obj = {};
-// obj.hi = 1;
-// obj.hi += 2;
-// console.log(obj);
+function returnFruitsBasket(basket) {
+  let result = 'Sua cesta possui: ';
+  let fruits = {};
+  let fruitsArray = [];
+  let fruitsNames = [];
+  for (let i = 0; i < basket.length; i += 1) {
+    if (isAlready(basket, basket[i], fruitsNames) === false) {
+      fruitsNames.push(basket[i]);
+    }
+  }
+  for (let i = 0; i < basket.length; i += 1) {
+    if (isAlready(basket, basket[i], fruitsArray) !== false) {
+      fruits[`${basket[i]}`] += 1;
+      fruitsArray.push(basket[i]);
+    } else {
+      fruits[`${basket[i]}`] = 1;
+      fruitsArray.push(basket[i]);
+    }
+  }
+  for (let i = 0; i < fruitsNames.length - 1; i += 1) {
+    if (fruits[`${fruitsNames[i]}`] > 1 && i > fruitsNames.length - 3) {
+      result += (fruits[`${fruitsNames[i]}`] + ' ' + fruitsNames[i]) + 's e ';
+    } else  if (fruits[`${fruitsNames[i]}`] > 1) {
+      result += (fruits[`${fruitsNames[i]}`] + ' ' + fruitsNames[i]) + 's, ';
+    } else {
+      result += (fruits[`${fruitsNames[i]}`] + ' ' + fruitsNames[i]) + ', ';
+    }
+  }
+  if (fruits[`${fruitsNames[fruitsNames.length - 1]}`] > 1) {
+    result += (fruits[`${fruitsNames[fruitsNames.length - 1]}`]) + ' ' + (fruitsNames[fruitsNames.length - 1]) + 's.';
+  } else {
+    result += (fruits[`${fruitsNames[fruitsNames.length - 1]}`]) + ' ' + (fruitsNames[fruitsNames.length - 1]);
+  }
+  return result;
+}
+console.log(returnFruitsBasket([
+  'Melancia', 'Abacate', 'Melancia', 'Melancia', 'Uva', 'Laranja',
+  'Jaca', 'Pera', 'Melancia', 'Uva', 'Laranja', 'Melancia',
+  'Banana', 'Uva', 'Pera', 'Abacate', 'Laranja', 'Abacate',
+  'Banana', 'Melancia', 'Laranja', 'Laranja', 'Jaca', 'Uva',
+  'Banana', 'Uva', 'Laranja', 'Pera', 'Melancia', 'Uva',
+  'Jaca', 'Banana', 'Pera', 'Abacate', 'Melancia', 'Melancia',
+  'Laranja', 'Pera', 'Banana', 'Jaca', 'Laranja', 'Melancia',
+  'Abacate', 'Abacate', 'Pera', 'Melancia', 'Banana', 'Banana',
+  'Abacate', 'Uva', 'Laranja', 'Banana', 'Abacate', 'Uva',
+  'Uva', 'Abacate', 'Abacate', 'Melancia', 'Uva', 'Jaca',
+  'Uva', 'Banana', 'Abacate', 'Banana', 'Uva', 'Banana',
+  'Laranja', 'Laranja', 'Jaca', 'Jaca', 'Abacate', 'Jaca',
+  'Laranja', 'Melancia', 'Pera', 'Jaca', 'Melancia', 'Uva',
+  'Abacate', 'Jaca', 'Jaca', 'Abacate', 'Uva', 'Laranja',
+  'Pera', 'Melancia', 'Jaca', 'Pera', 'Laranja', 'Jaca',
+  'Pera', 'Melancia', 'Jaca', 'Banana', 'Laranja', 'Jaca',
+  'Banana', 'Pera', 'Abacate', 'Uva', 'Manga']));
