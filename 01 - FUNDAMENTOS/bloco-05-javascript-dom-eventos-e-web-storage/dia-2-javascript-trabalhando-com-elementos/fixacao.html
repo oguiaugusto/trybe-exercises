@@ -30,7 +30,7 @@
     console.log(document.querySelector('#elementoOndeVoceEsta').nextElementSibling);
     console.log(document.querySelector('#pai').lastElementChild.previousElementSibling);
 
-    // Exercícios de Fixação da Parte 2
+    // Exercícios de Fixação da Parte II
     let pai = document.getElementById('pai');
     let novoFilho = document.createElement('section');
     novoFilho.innerText = `Irmão de 'onde estou'`;
@@ -45,6 +45,16 @@
     pai.firstElementChild.nextElementSibling.firstElementChild.appendChild(netoDoPai);
 
     console.log(netoDoPai.parentElement.parentElement.nextElementSibling);
+
+    // Exercícios de Fixação da Parte III
+    pai.firstElementChild.remove();
+    pai.firstElementChild.lastElementChild.remove();
+    pai.firstElementChild.lastElementChild.remove();
+    pai.firstElementChild.firstElementChild.firstElementChild.remove();
+    pai.lastElementChild.remove();
+    pai.lastElementChild.remove();
+    pai.lastElementChild.remove();
+
   </script>
 </body>
 </html>
