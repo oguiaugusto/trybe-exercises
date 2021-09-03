@@ -42,6 +42,7 @@ sectionThree.appendChild(numbersList);
 for (let i = 0; i < numbersArray.length; i += 1) {
   let currentNumber = document.createElement('li');
   currentNumber.innerText = numbersArray[i];
+  currentNumber.className = 'numbers-list-item';
   numbersList.appendChild(currentNumber);
 }
 
@@ -72,4 +73,11 @@ sectionThree.style.marginRight = 'auto';
 sectionOne.parentElement.style.backgroundColor = 'green';
 
 // 6. Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
-
+numbersList.className = 'numbers-list';
+let numbersListItems = document.querySelectorAll('.numbers-list-item');
+for (let i = 0; i < numbersListItems.length; i += 1) {
+  let currentItem = numbersListItems[i];
+  if (currentItem.innerText.includes('nove') || currentItem.innerText.includes('dez')) {
+    numbersList.removeChild(currentItem); 
+  }
+}
