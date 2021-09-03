@@ -46,4 +46,7 @@ for (let i = 0; i < numbersArray.length; i += 1) {
 }
 
 // 9. Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
-
+for (let i = 1; i <= 3; i += 1) {
+  let h3Tag = document.createElement('h3');
+  document.querySelector('.main-content').appendChild(h3Tag);
+}
