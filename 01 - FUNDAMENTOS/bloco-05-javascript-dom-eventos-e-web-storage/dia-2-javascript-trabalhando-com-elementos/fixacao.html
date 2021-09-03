@@ -20,6 +20,7 @@
     </section>
   </main>
   <script>
+    // Exercícios de Fixação da Parte I
     console.log(document.querySelector('#elementoOndeVoceEsta'));
     console.log(document.querySelector('#elementoOndeVoceEsta').parentNode.style.color = 'red');
     console.log(document.querySelector('#primeiroFilhoDoFilho').innerText = 'Muita atenção mesmo, é importante');
@@ -28,6 +29,22 @@
     console.log(document.querySelector('#elementoOndeVoceEsta').nextSibling);
     console.log(document.querySelector('#elementoOndeVoceEsta').nextElementSibling);
     console.log(document.querySelector('#pai').lastElementChild.previousElementSibling);
+
+    // Exercícios de Fixação da Parte 2
+    let pai = document.getElementById('pai');
+    let novoFilho = document.createElement('section');
+    novoFilho.innerText = `Irmão de 'onde estou'`;
+    pai.appendChild(novoFilho);
+
+    let novoFilhoDoFIlho = document.createElement('section');
+    novoFilhoDoFIlho.innerText = 'agora sim, o último';
+    pai.firstElementChild.nextElementSibling.appendChild(novoFilhoDoFIlho);
+
+    let netoDoPai = document.createElement('section');
+    netoDoPai.innerText = 'epa, já tem até neto';
+    pai.firstElementChild.nextElementSibling.firstElementChild.appendChild(netoDoPai);
+
+    console.log(netoDoPai.parentElement.parentElement.nextElementSibling);
   </script>
 </body>
 </html>
