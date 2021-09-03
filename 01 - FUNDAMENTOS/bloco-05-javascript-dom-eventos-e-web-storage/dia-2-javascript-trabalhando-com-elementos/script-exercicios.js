@@ -15,7 +15,9 @@ sectionOne.className = 'center-content';
 main.appendChild(sectionOne);
 
 // 4. Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
-
+let firstP = document.createElement('p');
+firstP.innerText = 'Boa tarde. Minha criatividade não se extende a textos.';
+sectionOne.appendChild(firstP);
 
 // 5. Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
 
