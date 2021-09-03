@@ -20,7 +20,9 @@ firstP.innerText = 'Boa tarde. Minha criatividade não se extende a textos.';
 sectionOne.appendChild(firstP);
 
 // 5. Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
-
+let sectionTwo = document.createElement('section');
+sectionTwo.className = 'left-content';
+main.appendChild(sectionTwo);
 
 // 6. Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
 
