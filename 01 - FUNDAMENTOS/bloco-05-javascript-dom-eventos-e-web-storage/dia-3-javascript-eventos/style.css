@@ -1,6 +1,7 @@
 
 * {
   margin: 0;
+  font-family: 'glory', sans-serif;
 }
 
 body {
@@ -56,7 +57,7 @@ label {
 }
 
 .month-container {
-  background: green;
+  background: #2e8849;
   padding: 40px 25px;
   text-align: center;
 }
