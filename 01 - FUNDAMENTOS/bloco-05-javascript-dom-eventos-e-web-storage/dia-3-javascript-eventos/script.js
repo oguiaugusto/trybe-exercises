@@ -30,5 +30,14 @@ function createCalendarDays() {
     days.appendChild(currentDay);
   }
 }
-
 createCalendarDays();
+
+function createHolidayButtons(name) {
+  let button = document.createElement('button');
+  let buttonsContainer = document.querySelector('.buttons-container');
+  button.innerText = `${name}`;
+  button.id = 'btn-holiday';
+  buttonsContainer.appendChild(button);
+}
+createHolidayButtons('Feriados');
+
