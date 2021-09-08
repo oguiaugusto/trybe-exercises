@@ -108,3 +108,11 @@ for (let index = 0; index < monthDays.length; index += 1) {
   monthDays[index].addEventListener('mouseover', zoomInDay);
   monthDays[index].addEventListener('mouseout', zoomOutDay);
 }
+
+let tasks = document.querySelector('.my-tasks');
+function addCustomTask(customTask) {
+  let task = document.createElement('span');
+  task.innerText = `${customTask}`;
+  tasks.appendChild(task);
+}
+addCustomTask('Estudar');
