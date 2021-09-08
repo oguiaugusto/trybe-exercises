@@ -62,3 +62,12 @@ function changeHolidaysColor() {
   }
 }
 holidayButton.addEventListener('click', changeHolidaysColor);
+
+function createFridayButton(name) {
+  let fridayButton = document.createElement('button');
+  let buttonsContainer = document.querySelector('.buttons-container');
+  fridayButton.innerText = `${name}`;
+  fridayButton.id = 'btn-friday';
+  buttonsContainer.appendChild(fridayButton);
+}
+createFridayButton('Sexta-Feira');
