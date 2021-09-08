@@ -40,4 +40,25 @@ function createHolidayButtons(name) {
   buttonsContainer.appendChild(button);
 }
 createHolidayButtons('Feriados');
+let holidayButton = document.getElementById('btn-holiday');
 
+let colorChanged = false;
+function changeHolidaysColor() {
+  let holidays = document.querySelectorAll('.holiday');
+  if (colorChanged === false) {
+    for (let index = 0; index < holidays.length; index += 1) {
+      let currentHoliday = holidays[index];
+      currentHoliday.style.backgroundColor = '#6d71bd';
+      currentHoliday.style.color = 'white';
+      colorChanged = true;
+    }
+  } else {
+    for (let index = 0; index < holidays.length; index += 1) {
+      let currentHoliday = holidays[index];
+      currentHoliday.style.backgroundColor = 'rgb(238,238,238)';
+      currentHoliday.style.color = '';
+      colorChanged = false;
+    }
+  }
+}
+holidayButton.addEventListener('click', changeHolidaysColor);
