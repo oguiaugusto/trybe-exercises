@@ -71,3 +71,26 @@ function createFridayButton(name) {
   buttonsContainer.appendChild(fridayButton);
 }
 createFridayButton('Sexta-Feira');
+let fridayButton = document.getElementById('btn-friday');
+
+let decemberFridays = [4, 11, 18, 25];
+let textChanged = false;
+function changeFridaysColor() {
+  let fridays = document.querySelectorAll('.friday');
+  let days = decemberFridays;
+  if (textChanged === false) {
+    for (let index = 0; index < fridays.length; index += 1) {
+      let currentFriday = fridays[index];
+      currentFriday.innerText = 'Sexta!';
+    }
+    textChanged = true;
+  } else {
+    for (let index = 0; index < days.length; index += 1) {
+      let currentFriday = fridays[index];
+      let currentDay = days[index];
+      currentFriday.innerText = currentDay;
+    }
+    textChanged = false;
+  }
+}
+fridayButton.addEventListener('click', changeFridaysColor);
