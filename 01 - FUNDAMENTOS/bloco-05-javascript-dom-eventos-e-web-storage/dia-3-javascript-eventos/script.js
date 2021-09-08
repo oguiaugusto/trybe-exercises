@@ -94,3 +94,17 @@ function changeFridaysColor() {
   }
 }
 fridayButton.addEventListener('click', changeFridaysColor);
+
+function zoomInDay(event) {
+  let day = event.target;
+  day.style.fontSize = '30px';
+}
+function zoomOutDay(event) {
+  let day = event.target;
+  day.style.fontSize = '';
+}
+let monthDays = document.querySelectorAll('.day');
+for (let index = 0; index < monthDays.length; index += 1) {
+  monthDays[index].addEventListener('mouseover', zoomInDay);
+  monthDays[index].addEventListener('mouseout', zoomOutDay);
+}
