@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Dê uma olhada no seu console para checar os exemplos sendo impressos.<br />;)</h1>
+  <script>
+    let organization = {
+      name: 'trybe',
+      since: 2019
+    };
+    sessionStorage.setItem('trybe', JSON.stringify(organization));
+    let org = JSON.parse(sessionStorage.getItem('trybe'));
+    console.log(org);
+
+    let classes = ["2019/set", "2019/oct"];
+    sessionStorage.setItem('classes', JSON.stringify(classes));
+    let cls = JSON.parse(sessionStorage.getItem('classes'));
+    console.log(cls);
+  </script>
+</body>
+</html>
