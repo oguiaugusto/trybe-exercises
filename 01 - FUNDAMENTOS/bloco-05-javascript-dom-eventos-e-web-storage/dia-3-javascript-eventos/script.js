@@ -126,3 +126,16 @@ function addColorToTask(cor) {
   myTasks.appendChild(task);
 }
 addColorToTask('lightblue');
+
+let isSelected = false;
+let task = document.querySelector('.task');
+function selectTask() {
+  if (isSelected === false) {
+    task.classList.add('selected');
+    isSelected = true;
+  } else {
+    task.classList.remove('selected');
+    isSelected = false;
+  }
+}
+task.addEventListener('click', selectTask);
