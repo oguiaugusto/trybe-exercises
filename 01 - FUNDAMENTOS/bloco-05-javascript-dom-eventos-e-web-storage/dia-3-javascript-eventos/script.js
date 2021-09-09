@@ -168,3 +168,29 @@ for (let index = 0; index < monthDays.length; index += 1) {
   monthDays[index].addEventListener('click', setSelectedTaskColor);
 }
 
+// Exercício Bônus
+let input = document.getElementById('task-input');
+let compromiseList = document.querySelector('.task-list');
+let addButton = document.getElementById('btn-add');
+
+function addCompromise() {
+  let text = input.value;
+  if (text.length > 1) {
+    let compromise = document.createElement('li');
+    compromise.className = 'compromise';
+    compromise.innerText = input.value;
+
+    compromiseList.appendChild(compromise);
+  } else {
+    let alerta = alert('ERRO!!');
+    return alerta;
+  }
+  input.value = '';
+}
+addButton.addEventListener('click', addCompromise);
+input.addEventListener('keyup', function (e) {
+  if (e.key === 'Enter' && input.value.length >= 0) {
+    e.preventDefault();
+    addCompromise();
+  }
+});
