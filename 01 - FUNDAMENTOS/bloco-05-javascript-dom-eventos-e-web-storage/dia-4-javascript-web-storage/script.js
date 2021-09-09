@@ -7,11 +7,14 @@ const inputFontType = document.getElementById('font-type-input');
 
 const buttonBgColor = document.getElementById('bg-color-button');
 const buttonTextColor = document.getElementById('text-color-button');
+const buttonFontSize = document.getElementById('font-size-button');
+
 
 // Constantes auxiliares das funções
 const body = document.querySelector('body');
 const textTitle = document.querySelector('.article-title');
 const text = document.querySelectorAll('.text-paragraph');
+
 
 // Funções
 function changeBgColor() {
@@ -29,6 +32,15 @@ function changeTextColor() {
   inputTextColor.value = '';
 }
 
+function changeFontSize() {
+  let size = inputFontSize.value;
+  for (let index = 0; index < text.length; index += 1) {
+    text[index].style.fontSize = `${size}` + 'px';
+  }
+  inputFontSize.value = '';
+}
+
+
 // Event Listener
 buttonBgColor.addEventListener('click', changeBgColor);
 inputBgColor.addEventListener('keyup', function (e) {
@@ -44,4 +56,12 @@ inputTextColor.addEventListener('keyup', function (e) {
     e.preventDefault();
     changeTextColor();
   }
-})
+});
+
+buttonFontSize.addEventListener('click', changeFontSize);
+inputFontSize.addEventListener('keyup', function (e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    changeFontSize();
+  }
+});
