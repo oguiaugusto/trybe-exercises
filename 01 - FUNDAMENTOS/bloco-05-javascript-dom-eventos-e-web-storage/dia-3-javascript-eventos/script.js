@@ -139,3 +139,21 @@ function selectTask() {
   }
 }
 task.addEventListener('click', selectTask);
+
+let selectedDayColor = false;
+function setSelectedTaskColor(event) {
+  if (selectedDayColor === false) {
+    let selectedDay = event.target;
+    let selectedTask = document.querySelector('.selected');
+    let taskBgColorValue = window.getComputedStyle(selectedTask).getPropertyValue('background-color');
+    selectedDay.style.color = taskBgColorValue;
+    selectedDayColor = true;
+  } else {
+    let selectedDay = event.target;
+    selectedDay.style.color = 'rgb(119,119,119)';
+    selectedDayColor = false;
+  }
+}
+for (let index = 0; index < monthDays.length; index += 1) {
+  monthDays[index].addEventListener('click', setSelectedTaskColor);
+}
