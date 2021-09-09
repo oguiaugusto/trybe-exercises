@@ -8,6 +8,7 @@ const inputFontType = document.getElementById('font-type-input');
 const buttonBgColor = document.getElementById('bg-color-button');
 const buttonTextColor = document.getElementById('text-color-button');
 const buttonFontSize = document.getElementById('font-size-button');
+const buttonLineHeight = document.getElementById('line-height-button');
 
 
 // Constantes auxiliares das funções
@@ -40,6 +41,14 @@ function changeFontSize() {
   inputFontSize.value = '';
 }
 
+function changeLineHeight() {
+  let height = inputLineHeight.value;
+  for (let index = 0; index < text.length; index += 1) {
+    text[index].style.lineHeight = `${height}` + 'px';
+  }
+  inputLineHeight.value = '';
+}
+
 
 // Event Listener
 buttonBgColor.addEventListener('click', changeBgColor);
@@ -63,5 +72,13 @@ inputFontSize.addEventListener('keyup', function (e) {
   if (e.key === 'Enter') {
     e.preventDefault();
     changeFontSize();
+  }
+});
+
+buttonLineHeight.addEventListener('click', changeLineHeight);
+inputLineHeight.addEventListener('keyup', function (e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    changeLineHeight();
   }
 });
