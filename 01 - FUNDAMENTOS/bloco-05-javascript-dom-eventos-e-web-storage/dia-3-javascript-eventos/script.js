@@ -15,6 +15,7 @@ createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
 
+// Exercício 1
 function createCalendarDays() {
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
   for (let i = 0; i < dezDaysList.length; i += 1) {
@@ -32,6 +33,7 @@ function createCalendarDays() {
 }
 createCalendarDays();
 
+// Exercício 2
 function createHolidayButtons(name) {
   let button = document.createElement('button');
   let buttonsContainer = document.querySelector('.buttons-container');
@@ -42,6 +44,7 @@ function createHolidayButtons(name) {
 createHolidayButtons('Feriados');
 let holidayButton = document.getElementById('btn-holiday');
 
+// Exercício 3
 let colorChanged = false;
 function changeHolidaysColor() {
   let holidays = document.querySelectorAll('.holiday');
@@ -63,6 +66,7 @@ function changeHolidaysColor() {
 }
 holidayButton.addEventListener('click', changeHolidaysColor);
 
+// Exercício 4
 function createFridayButton(name) {
   let fridayButton = document.createElement('button');
   let buttonsContainer = document.querySelector('.buttons-container');
@@ -73,6 +77,7 @@ function createFridayButton(name) {
 createFridayButton('Sexta-Feira');
 let fridayButton = document.getElementById('btn-friday');
 
+// Exercício 5
 let decemberFridays = [4, 11, 18, 25];
 let textChanged = false;
 function changeFridaysColor() {
@@ -95,6 +100,7 @@ function changeFridaysColor() {
 }
 fridayButton.addEventListener('click', changeFridaysColor);
 
+// Exercício 6
 function zoomInDay(event) {
   let day = event.target;
   day.style.fontSize = '30px';
@@ -109,6 +115,7 @@ for (let index = 0; index < monthDays.length; index += 1) {
   monthDays[index].addEventListener('mouseout', zoomOutDay);
 }
 
+// Exercício 7
 let tasks = document.querySelector('.my-tasks');
 function addCustomTask(customTask) {
   let task = document.createElement('span');
@@ -117,6 +124,7 @@ function addCustomTask(customTask) {
 }
 addCustomTask('Estudar');
 
+// Exercício 8
 function addColorToTask(cor) {
   let task = document.createElement('div');
   let myTasks = document.querySelector('.my-tasks');
@@ -127,6 +135,7 @@ function addColorToTask(cor) {
 }
 addColorToTask('lightblue');
 
+// Exercício 9
 let isSelected = false;
 let task = document.querySelector('.task');
 function selectTask() {
@@ -140,6 +149,7 @@ function selectTask() {
 }
 task.addEventListener('click', selectTask);
 
+// Exercício 10
 let selectedDayColor = false;
 function setSelectedTaskColor(event) {
   if (selectedDayColor === false) {
@@ -157,3 +167,4 @@ function setSelectedTaskColor(event) {
 for (let index = 0; index < monthDays.length; index += 1) {
   monthDays[index].addEventListener('click', setSelectedTaskColor);
 }
+
