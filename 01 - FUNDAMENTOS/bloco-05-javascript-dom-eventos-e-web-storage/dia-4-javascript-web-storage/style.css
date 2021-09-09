@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(219, 219, 219);
+}
+
+#header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 15px 20px 20px 15px;
+  background-color: rgb(60, 85, 165);
+}
+
+#header h1 {
+  background-color: rgb(60, 85, 165);
+  color: white;
+}
+
+#main-content {
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 30px 40px;
+  border: 1px solid black;
+}
+
+.article-title {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.text-paragraph {
+  margin-bottom: 10px;
+  line-height: 25px;
+}
+
+#reader-settings {
+  width: max-content;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  padding: 15px 20px;
+  background-color: rgb(207, 207, 207);
+}
+
+#reader-settings-title {
+  text-align: left;
+  margin-bottom: 10px;
+  background-color: rgb(207, 207, 207);
+}
+
+.preference-button {
+  margin-bottom: 5px;
+  background-color: rgb(207, 207, 207);
+}
+
+.preference-button input {
+  border-color: black;
+  border-width: 1px;
+  color: black;
+}
+
+.preference-button button {
+  border-width: 1px;
+}
