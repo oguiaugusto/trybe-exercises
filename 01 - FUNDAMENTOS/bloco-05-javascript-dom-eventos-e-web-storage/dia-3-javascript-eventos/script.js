@@ -116,3 +116,13 @@ function addCustomTask(customTask) {
   tasks.appendChild(task);
 }
 addCustomTask('Estudar');
+
+function addColorToTask(cor) {
+  let task = document.createElement('div');
+  let myTasks = document.querySelector('.my-tasks');
+  task.className = 'task';
+  task.style.backgroundColor = `${cor}`;
+
+  myTasks.appendChild(task);
+}
+addColorToTask('lightblue');
