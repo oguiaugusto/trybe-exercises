@@ -45,6 +45,8 @@ function changeBgColor() {
 function changeTextColor() {
   let color = inputTextColor.value;
   textTitle.style.color = `${color}`;
+  let main = document.getElementById('main-content');
+  main.style.borderColor = `${color}`;
   for (let index = 0; index < text.length; index += 1) {
     text[index].style.color = `${color}`;
   }
