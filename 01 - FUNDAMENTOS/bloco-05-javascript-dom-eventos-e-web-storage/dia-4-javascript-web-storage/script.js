@@ -12,6 +12,21 @@ const buttonLineHeight = document.getElementById('line-height-button');
 const buttonFontType = document.getElementById('font-type-button');
 
 
+// Storage
+window.onload = function() {
+  loadStorage('backgroundColor', inputBgColor, changeBgColor);
+  loadStorage('textColor', inputTextColor, changeTextColor);
+  loadStorage('fontSize', inputFontSize, changeFontSize);
+  loadStorage('lineHeight', inputLineHeight, changeLineHeight);
+  loadStorage('fontType', inputFontType, changeFontFamily);
+
+  function loadStorage(item, input, funct) {
+    let getFromStorage = JSON.parse(localStorage.getItem(`${item}`));
+    input.value = getFromStorage;
+    funct();
+  }
+}
+
 // Constantes auxiliares das funções
 const body = document.querySelector('body');
 const textTitle = document.querySelector('.article-title');
@@ -23,6 +38,8 @@ function changeBgColor() {
   let color = inputBgColor.value;
   body.style.backgroundColor = `${color}`;
   inputBgColor.value = '';
+
+  localStorage.setItem('backgroundColor', JSON.stringify(color));
 }
 
 function changeTextColor() {
@@ -32,6 +49,8 @@ function changeTextColor() {
     text[index].style.color = `${color}`;
   }
   inputTextColor.value = '';
+
+  localStorage.setItem('textColor', JSON.stringify(color));
 }
 
 function changeFontSize() {
@@ -40,6 +59,8 @@ function changeFontSize() {
     text[index].style.fontSize = `${size}` + 'px';
   }
   inputFontSize.value = '';
+
+  localStorage.setItem('fontSize', JSON.stringify(size));
 }
 
 function changeLineHeight() {
@@ -48,12 +69,16 @@ function changeLineHeight() {
     text[index].style.lineHeight = `${height}` + 'px';
   }
   inputLineHeight.value = '';
+
+  localStorage.setItem('lineHeight', JSON.stringify(height));
 }
 
 function changeFontFamily() {
   let font = inputFontType.value;
   body.style.fontFamily = `"${font}"` + ', sans-serif';
   inputFontType.value = '';
+
+  localStorage.setItem('fontType', JSON.stringify(font));
 }
 
 
