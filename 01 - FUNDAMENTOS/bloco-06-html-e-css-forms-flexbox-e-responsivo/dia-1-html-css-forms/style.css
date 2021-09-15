@@ -130,3 +130,29 @@ input[type="text"]:focus, input[type="email"]:focus, textarea {
   background-color: rgb(58, 102, 58);
   border-color: rgb(58, 102, 58);
 }
+
+#start-date {
+  margin-right: 2px;
+}
+
+#clear-date {
+  font-size: 8px;
+  vertical-align: middle;
+  margin-bottom: 4px;
+  padding: 2px;
+  border: 1px solid rgb(175, 91, 91);
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  transition-duration: 0.4s;
+}
+
+#clear-date:hover {
+  background-color:  rgb(175, 91, 91);
+  color: rgb(240, 240, 240);
+}
+
+#clear-date:active {
+  background-color:  rgb(143, 67, 67);
+  color: rgb(240, 240, 240);
+  border-color: rgb(143, 67, 67);
+}
