@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <title>Curriculo</title>
 </head>
@@ -17,7 +20,7 @@
   </header>
   <main>
     <section id="input-form">
-      <form action="">
+      <form action="" name="formy">
         <div class="form-row">
           <fieldset id="personal-data" class="field">
             <legend>Dados Pessoais</legend>
@@ -43,9 +46,9 @@
                 <option value="blank">-- Selecione seu estado --</option>
               </select>
               <div id="type-content">
-                <input type="radio" name="type" value="house" id="house" required>
+                <input type="radio" name="type" value="house" id="house" class="type-radio" required>
                 <label for="house" class="type-class">Casa</label>
-                <input type="radio" name="type" value="apartment" id="apartment" required>
+                <input type="radio" name="type" value="apartment" id="apartment" class="type-radio" required>
                 <label for="apartment" class="type-class">Apartamento</label>
               </div>
             </div>
@@ -56,7 +59,7 @@
             <div class="form-line" id="resume-line">
               <label for="resume">Resumo do currículo: </label>
               <div id="resume-content">
-                <textarea name="abstract-resume" id="resume" placeholder="Escreva um breve resumo do seu currículo" cols="10" rows="5" maxlength="1000"></textarea>
+                <textarea name="resume" id="resume" placeholder="Escreva um breve resumo do seu currículo. Min. 100 caracteres" cols="10" rows="5" maxlength="1000"></textarea>
               </div>
             </div>
             <div class="form-line">
@@ -69,11 +72,26 @@
           </fieldset>
         </div>
         </fieldset>
-        <div id="button">
+        <div class="button">
           <button type="submit" id="sub-button">Submit</button>
+        </div>
+        <div class="button">
+          <button type="button" id="clear-all">Limpar Tudo</button>
         </div>
       </form>
     </section>
+    <!-- <section>
+      <div class="output-container" id="first-container">
+        <p class="output-line">Linha 1</p>
+        <p class="output-line">Linha 2</p>
+        <p class="output-line">Linha 3</p>
+      </div>
+      <div class="output-container" id="second-container">
+        <div class="output-line">Linha 4</div>
+        <div class="output-box">Linha 5</div>
+        <div class="output-line">Linha 6</div>
+      </div>
+    </section> -->
     <script src="script.js"></script>
   </main>
 </body>

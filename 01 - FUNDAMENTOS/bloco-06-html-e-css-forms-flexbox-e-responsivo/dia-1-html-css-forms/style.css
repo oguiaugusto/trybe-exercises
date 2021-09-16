@@ -106,7 +106,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea {
   box-shadow: 0 0 2px black;
 }
 
-#button {
+.button {
   width: max-content;
   margin-left: auto;
   margin-right: auto;
@@ -138,7 +138,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea {
 #clear-date {
   font-size: 8px;
   vertical-align: middle;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   padding: 2px;
   border: 1px solid rgb(175, 91, 91);
   background-color: rgb(240, 240, 240);
@@ -152,6 +152,42 @@ input[type="text"]:focus, input[type="email"]:focus, textarea {
 }
 
 #clear-date:active {
+  background-color:  rgb(143, 67, 67);
+  color: rgb(240, 240, 240);
+  border-color: rgb(143, 67, 67);
+}
+
+#first-container {
+  margin-bottom: 40px;
+}
+
+.output-line {
+  font-family: Roboto Mono, monospace;
+  text-align: center;
+}
+
+.output-box {
+  border: 1px solid black;
+  padding: 10px 20%;
+  font-family: Roboto Mono, monospace;
+  text-align: left;
+}
+
+#clear-all {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: 3px solid rgb(175, 91, 91);
+  background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+  transition-duration: 0.4s;
+}
+
+#clear-all:hover {
+  background-color:  rgb(175, 91, 91);
+  color: rgb(240, 240, 240);
+}
+
+#clear-all:active {
   background-color:  rgb(143, 67, 67);
   color: rgb(240, 240, 240);
   border-color: rgb(143, 67, 67);
