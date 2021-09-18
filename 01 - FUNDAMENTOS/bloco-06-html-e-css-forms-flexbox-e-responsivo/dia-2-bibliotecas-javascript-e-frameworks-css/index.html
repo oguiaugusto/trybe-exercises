@@ -8,6 +8,77 @@
   <title>Currículo</title>
 </head>
 <body>
+  <main>
+    <header>
+      <h1>Currículo</h1>
+      <p>Insira suas informações abaixo:</p>
+    </header>
+    <form action="">
+      <div id="first-section">
+        <p>Dados pessoais</p>
+        <div class="line">
+          <label for="name">Nome:</label>
+          <input type="text" name="name" id="name">
+        </div>
+        <div class="line">
+          <div>
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email">
+          </div>
+          <div>
+            <label for="cpf">CPF:</label>
+            <input type="text" name="cpf" id="cpf">
+          </div>
+        </div>
+        <div class="line">
+          <div>
+            <label for="address">Endereço:</label>
+            <input type="text" name="address" id="address">
+          </div>
+          <div>
+            <label for="city">Cidade:</label>
+            <input type="text" name="city" id="city">
+          </div>
+        </div>
+        <div class="line">
+          <div>
+            <label for="state">Estado:</label>
+            <select name="state" id="states">
+              <option value="blank">-- Selecione seu estado --</option>
+            </select>
+          </div>
+          <div>
+            <input type="radio" name="type" value="house" id="house" class="type-radio" required>
+            <label for="house" class="type-class">Casa</label>
+            <input type="radio" name="type" value="apartment" id="apartment" class="type-radio" required>
+            <label for="apartment" class="type-class">Apartamento</label>
+          </div>
+        </div>
+      </div>
+      <div id="secondSection">
+        <p>Ultimo emprego</p>
+        <div class="line">
+          <div>
+            <p>Resumo do Currículo</p>
+          </div>
+          <div>
+            <label for="resume"></label>
+            <textarea name="resume" id="resume" cols="30" rows="5" placeholder="Mínimo de 100 caracteres"></textarea>
+          </div>
+        </div>
+        <div class="line">
+          <div>
+            <label for="role">Cargo:</label>
+            <input type="text" name="role" id="role">
+          </div>
+          <div>
+            <label for="date">Data de início:</label>
+            <input type="text" name="date" id="date">
+          </div>
+        </div>
+      </div>
+    </form>
+  </main>
   <script src="scripts.js"></script>
 </body>
 </html>
