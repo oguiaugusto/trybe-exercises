@@ -18,6 +18,25 @@ const startDate = document.getElementById('date');
 const roleInfo = document.getElementById('role-info');
 let homeType;
 
+validation.init("form");
+
+validation.rules["selected"] = {
+  message: "Selecione uma opção!",
+  method: el => {
+    return el.value !== 'blank';
+  }
+}
+
+validation.rules["radio-select"] = {
+  message: "Selecione uma opção!",
+  method: el => {
+    const elNames = document.getElementsByName(`${el.name}`);
+    for (let i = 0; i < elNames.length; i += 1) {
+      return elNames[i].checked === true;
+    }
+  }
+}
+
 const sDate = new Pikaday({
   field: startDate,
   maxDate: new Date(),
@@ -49,6 +68,11 @@ function setStatesOption() {
   }
 }
 
+function checkInputs() {
+  const check = validation.validate();
+  return check;
+}
+
 function getLines(line) {
   checkRadio();
 
@@ -77,65 +101,71 @@ function getLines(line) {
   return lineOutput;
 }
 
-function clearOutputs() {
-  clearButton.click();
+function clearOutputSection() {
+  while (outputSection.firstChild) {
+    const toRemove = outputSection.firstChild;
+    outputSection.removeChild(toRemove);
+  }
 }
 
 function outputForm(e) {
   e.preventDefault();
-  clearOutputs();
-
-  const firstOutputDiv = document.createElement('div');
-  firstOutputDiv.className = 'container';
-  firstOutputDiv.style.marginBottom = '40px';
-
-  const secondOutputDiv = document.createElement('div');
-  secondOutputDiv.className = 'container';
-
-  const forOrSix = {
-    4: 'Resumo do Currículo:',
-    6: 'Descrição do Cargo:',
-  };
-
-  for (let i = 1; i <= 6; i += 1) {
-    if (i <= 3) {
-      const line = document.createElement('p');
-      line.className = 'output-line';
-      line.innerText = getLines(i);
-
-      firstOutputDiv.appendChild(line);
+  if (!checkInputs()) {
+    return alert('Por favor, preencha os campos');
+  } else {
+    clearOutputSection();
+    const firstOutputDiv = document.createElement('div');
+    firstOutputDiv.className = 'container';
+    firstOutputDiv.style.marginBottom = '40px';
+  
+    const secondOutputDiv = document.createElement('div');
+    secondOutputDiv.className = 'container';
+  
+    const forOrSix = {
+      4: 'Resumo do Currículo:',
+      6: 'Descrição do Cargo:',
+    };
+  
+    for (let i = 1; i <= 6; i += 1) {
+      if (i <= 3) {
+        const line = document.createElement('p');
+        line.className = 'output-line';
+        line.innerText = getLines(i);
+  
+        firstOutputDiv.appendChild(line);
+      }
+      if (i === 4 || i === 6) {
+        const textBox = document.createElement('div');
+        textBox.className = 'container';
+        const upperText = document.createElement('p');
+        upperText.innerText = `${forOrSix[i]}`;
+        upperText.className = 'output-line';
+  
+        const text = document.createElement('p');
+        text.className = 'output-textbox';
+        text.style.border = '1px solid black';
+        text.style.padding = '5px 10px';
+        text.innerText = getLines(i);
+  
+        textBox.appendChild(upperText);
+        textBox.appendChild(text);
+  
+        secondOutputDiv.appendChild(textBox);
+      } else if (i === 5) {
+        const line = document.createElement('p');
+        line.className = 'output-line';
+        line.innerText = getLines(i);
+  
+        secondOutputDiv.appendChild(line);
+      }
     }
-    if (i === 4 || i === 6) {
-      const textBox = document.createElement('div');
-      textBox.className = 'container';
-      const upperText = document.createElement('p');
-      upperText.innerText = `${forOrSix[i]}`;
-      upperText.className = 'output-line';
-
-      const text = document.createElement('p');
-      text.className = 'output-textbox';
-      text.style.border = '1px solid black';
-      text.style.padding = '5px 10px';
-      text.innerText = getLines(i);
-
-      textBox.appendChild(upperText);
-      textBox.appendChild(text);
-
-      secondOutputDiv.appendChild(textBox);
-    } else if (i === 5) {
-      const line = document.createElement('p');
-      line.className = 'output-line';
-      line.innerText = getLines(i);
-
-      secondOutputDiv.appendChild(line);
-    }
+    outputSection.appendChild(firstOutputDiv);
+    outputSection.appendChild(secondOutputDiv);
   }
-  outputSection.appendChild(firstOutputDiv);
-  outputSection.appendChild(secondOutputDiv);
 }
 
 subButton.addEventListener('click', outputForm);
-
+clearButton.addEventListener('click', clearOutputSection);
 
 window.onload = (e) => {
   setStatesOption();
