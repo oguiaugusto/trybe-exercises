@@ -18,6 +18,18 @@ const startDate = document.getElementById('date');
 const roleInfo = document.getElementById('role-info');
 let homeType;
 
+const sDate = new Pikaday({
+  field: startDate,
+  maxDate: new Date(),
+  yearRange: 40,
+  toString(date, format) {
+    return moment(date).format('DD/MM/YYYY');
+  },
+  parse(dateString, format) {
+    return moment(dateString).format('DD/MM/YYYY');
+  }
+});
+
 function checkRadio() {
   for (let radios in homeTypes) {
     if (homeTypes[radios].checked) {
