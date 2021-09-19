@@ -23,33 +23,33 @@
           <div class="container row">
             <div class="col">
               <label class="form-label" for="name">Nome:</label>
-              <input class="form-control" type="text" name="name" id="name">
+              <input class="form-control" type="text" name="name" id="name" maxlength="40" required>
             </div>
           </div>
           <div class="container row">
             <div class="col-8">
               <label class="form-label" for="email">Email:</label>
-              <input class="form-control" type="text" name="email" id="email">
+              <input class="form-control" type="email" name="email" id="email" maxlength="50" required>
             </div>
             <div class="col">
               <label class="form-label" for="cpf">CPF:</label>
-              <input class="form-control" type="text" name="cpf" id="cpf">
+              <input class="form-control" type="text" name="cpf" id="cpf" maxlength="11" required>
             </div>
           </div>
           <div class="container row">
             <div class="col-8">
               <label class="form-label" for="address">Endereço:</label>
-              <input class="form-control" type="text" name="address" id="address">
+              <input class="form-control" type="text" name="address" id="address" maxlength="200" required>
             </div>
             <div class="col">
               <label class="form-label" for="city">Cidade:</label>
-              <input class="form-control" type="text" name="city" id="city">
+              <input class="form-control" type="text" name="city" id="city" maxlength="28" required>
             </div>
           </div>
           <div class="container row">
             <div class="col-8">
               <label for="state">Estado:</label>
-              <select class="form-select text-center" name="state" id="states">
+              <select class="form-select text-center" name="state" id="states" required>
                 <option value="blank">-- Selecione seu estado --</option>
               </select>
             </div>
@@ -71,19 +71,29 @@
           <div class="container row">
             <div class="col">
               <label class="form-label" for="resume">Resumo do Currículo:</label>
-              <textarea class="form-control" name="resume" id="resume" cols="30" rows="5" placeholder="Mínimo de 100 caracteres"></textarea>
+              <textarea class="form-control" name="resume" id="resume" cols="30" rows="5" minlength="100" maxlength="1000" placeholder="Mínimo de 100 caracteres" required></textarea>
             </div>
           </div>
           <div class="container row">
             <div class="container col">
               <label class="form-label" for="role">Cargo:</label>
-              <input class="form-control" type="text" name="role" id="role">
+              <input class="form-control" type="text" name="role" id="role" maxlength="40" required>
             </div>
             <div class="container col-5">
               <label class="form-label" for="date">Data de início:</label>
-              <input class="form-control" type="text" name="date" id="date">
+              <input class="form-control" type="text" name="date" id="date" required>
             </div>
           </div>
+          <div class="container row">
+            <div class="col">
+              <label for="form-label">Descrição do Cargo:</label>
+              <textarea class="form-control" name="role-info" id="role-info" cols="30" rows="5" minlength="50" maxlength="500" placeholder="Mínimo de 50 caracteres" required></textarea>
+            </div>
+          </div>
+        </section>
+        <section class="container text-center" id="buttons">
+          <button class="btn btn-success" type="submit" id="submit-button">Enviar</button>
+          <button class="btn btn-danger" type="reset" id="reset-button">Limpar Tudo</button>
         </section>
       </form>
     </section>
