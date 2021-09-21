@@ -1,0 +1,111 @@
+body {
+  font-size: large;
+  padding: 5px 20px;
+}
+
+h1 {
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+p {
+  line-height: 28px;
+}
+
+.cat-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+figure {
+  margin: 0;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+figure figcaption {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: aliceblue;
+    padding: 5px 15px;
+    font-size: x-large;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    line-height: 40px;
+  }
+  
+  .cat-images {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  figure {
+    width: 45%;
+  }
+
+  figure figcaption {
+    font-size: medium;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-color: antiquewhite;
+    padding: 5px 20px;
+    font-size: x-large;
+    max-width: 80%;
+    margin: auto
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    line-height: 40px;
+  }
+  
+  .cat-images {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  figure {
+    width: 30%;
+  }
+
+  figure figcaption {
+    font-size: medium;
+  }
+
+  main {
+    margin-top: 50px;
+  }
+}
+
