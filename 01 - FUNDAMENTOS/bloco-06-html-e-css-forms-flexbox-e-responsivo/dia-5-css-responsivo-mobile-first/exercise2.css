@@ -150,3 +150,18 @@ hr {
 .dropdown-chapters {
   max-height: max-content !important;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .nav-bar ul {
+    margin: 0 240px;
+  }
+
+  .main-content p {
+    padding: 10px 80px;
+    line-height: 1.8rem;
+  }
+
+  .footer p {
+    padding: 0 50px;
+  }
+}
