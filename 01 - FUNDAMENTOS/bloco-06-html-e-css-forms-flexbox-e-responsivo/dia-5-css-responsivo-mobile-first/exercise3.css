@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 #container {
   margin: 0 auto;
   width: 100%;
@@ -79,6 +83,35 @@
   text-align: right;
   padding: 20px;
   height: 1%;
+}
+
+@media screen and (max-width: 768px) {
+  #aside {
+    display: none;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  img {
+    max-width: 240px;
+  }
+
+  header {
+    width: 100%;
+    position: fixed;
+  }
+
+  #navigation {
+    width: 100%;
+    margin-top: 80px;
+  }
+
+  #navigation ul li {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media print {
