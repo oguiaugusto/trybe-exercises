@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+}
+
+.header {
+  background-color: rgb(60, 59, 139);
+  width: 100%;
+}
+
+.header h1 {
+  font-size: 1.3rem;
+  padding: 15px 10px;
+  padding-top: 20px;
+  padding-bottom: 0;
+  margin-bottom: 3px;
+  text-align: center;
+  color: white;
+}
+
+.header h2 {
+  font-size: 1.3rem;
+  padding: 15px 30px;
+  padding-top: 0;
+  text-align: center;
+  color: white;
+}
+
+nav {
+  background-color: rgb(37, 36, 82);
+  
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px 20px;
+  margin: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+#scientific-table {
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-info {
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 10px;
+}
+
+#bibliography ul li {
+  list-style-type: square;
+  color: black;
+}
+
+#bibliography ul li a {
+  text-decoration: none;
+}
+
+#bibliography li a:visited {
+  color: rgb(46, 46, 46);
+}
+
+aside a p {
+  margin: 0;
+  font-size: 0.7em;
+}
+
+hr {
+  width: 60%;
+  margin: auto !important;
+}
+
+footer {
+  background-color: rgb(60, 59, 139);
+}
+
+footer p {
+  margin-bottom: 0;
+  padding: 15px;
+  color: white;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  nav ul {
+    padding: 5px 190px;
+  }
+
+  #scientific-table {
+    width: 400px;
+  }
+
+  #more-info-aside h4 {
+    font-size: 1.5rem !important;
+  }
+
+  #more-info-aside p {
+    font-size: 1rem;
+  }
+
+  .img-info {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #scientific-table {
+    width: 300px;
+  }
+
+  #more-info-aside {
+    width: 300px;
+    text-align: center;
+    border: 1px solid #e0e4e7;
+  }
+
+  #more-info-aside > p {
+    background-color: #e2e3e5;
+    margin-bottom: 0;
+    padding: 10px 0;
+  }
+
+  #more-info-aside a div p {
+    margin: 0;
+    color: black;
+  }
+
+  #more-info-aside a div {
+    padding: 10px 0;
+    background-color: rgb(245, 245, 245);
+  }
+
+  #more-info-aside a {
+    text-decoration: none;
+  }
+
+  #infos {
+    width: 300px;
+    margin-bottom: 15%;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  article {
+    max-width: 60% !important;
+  }
+
+  #asides {
+    margin-top: 70px;
+    margin-right: 40px;
+  }
+
+  nav ul {
+    padding: 5px 35%;
+  }
+}
