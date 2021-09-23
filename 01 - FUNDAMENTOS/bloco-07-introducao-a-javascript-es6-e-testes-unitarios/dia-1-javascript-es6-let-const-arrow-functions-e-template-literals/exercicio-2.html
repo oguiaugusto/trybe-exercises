@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de cliques</title>
+  <style>
+    body {
+      text-align: center;
+      width: max-content;
+      margin: 20px auto;
+      font-size: 40px;
+    }
+
+    .click-display {
+      display: inline;  
+    }
+
+    #click-me {
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+      font-size: 40px;
+      padding: 20px 30px;
+      border: 2px solid rgb(60, 133, 60);
+      border-radius: 20px;
+      background-color: rgb(245, 245, 245);
+      transition-duration: 0.2s;
+    }
+
+    #click-me:hover {
+      background-color: rgb(60, 133, 60);
+      color: rgb(245, 245, 245);
+    }
+
+    #click-me:active {
+      background-color: rgb(88, 172, 88);
+      border-color: rgb(88, 172, 88);
+      color: rgb(245, 245, 245);
+    }
+
+  </style>
+</head>
+<body>
+  <section id="button-section">
+    <p class="click-display">Cliques:</p>
+    <p class="click-display" id="click-counting">0</p>
+    <button type="button" id="click-me">CLIQUE AQUI</button>
+  </section>
+  <script src="exercicio-2-page.js"></script>
+</body>
+</html>
