@@ -1,6 +1,7 @@
 const {
   sum,
   myRemove,
+  myFizzBuzz,
 } = require('./script');
 
 describe('Função sum()', () => {
@@ -30,5 +31,23 @@ describe('Função myRemove()', () => {
   it('myRemove([1, 2, 3, 4], 5) retorna [1, 2, 3, 4]', () => {
     const array = [1, 2, 3, 4];
     expect(myRemove(array, 5)).toEqual(array);
+  });
+});
+
+describe('Função myFizzBuzz()', () => {
+  it('verifica se 15 retorna "fizzbuzz"', () => {
+    expect(myFizzBuzz(15)).toEqual('fizzbuzz');
+  });
+  it('verifica se 12 retorna "fizz"', () => {
+    expect(myFizzBuzz(12)).toEqual('fizz');
+  });
+  it('verifica se 10 retorna "buzz"', () => {
+    expect(myFizzBuzz(10)).toEqual('buzz');
+  });
+  it('verifica se 8 retorna 8', () => {
+    expect(myFizzBuzz(8)).toEqual(8);
+  });
+  it('verifica se, ao enviar um parâmetro que não é número, a função retorna false', () => {
+    expect(myFizzBuzz('hi')).toBeFalsy();
   });
 });
