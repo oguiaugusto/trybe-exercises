@@ -3,7 +3,7 @@ const {
   encode,
   techList,
   hydrate,
-} = require('./playground-functions');
+} = require('../playground-functions');
 
 describe('Encode and Decode functions:', () => {
   it('Expect to be functions', () => {

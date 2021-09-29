@@ -2,7 +2,7 @@ const {
   sum,
   myRemove,
   myFizzBuzz,
-} = require('./script');
+} = require('../script');
 
 describe('Função sum()', () => {
   it('sum(4, 5) é igual a 9', () => {
