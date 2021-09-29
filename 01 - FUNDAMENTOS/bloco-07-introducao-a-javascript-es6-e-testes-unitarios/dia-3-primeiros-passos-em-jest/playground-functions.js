@@ -56,20 +56,15 @@ function techList(array, name) {
 
 function hydrate(string) {
   let suggestion = '';
-  let findNumbers = /\d+/g;
-  let numbers = string.match(findNumbers);
-  let glassOfWater = 0;
-  for (let index = 0; index < numbers.length; index += 1) {
-    let number = 0;
-    number = parseInt(numbers[index], 10);
-    glassOfWater += number;
+  const numbers = string.match(/\d+/g);
+  let glass = 0;
+  for (let i = 0; i < numbers.length; i += 1) {
+    glass += parseInt(numbers[i]);
   }
-  if (glassOfWater > 1) {
-    suggestion = `${glassOfWater} copos de água`;
-  } else {
-    suggestion = `${glassOfWater} copo de água`;
+  if (glass !== 1) {
+    return `${glass} copos de água`;
   }
-  return suggestion;
+  return '1 copo de água';
 }
 
 module.exports = {
