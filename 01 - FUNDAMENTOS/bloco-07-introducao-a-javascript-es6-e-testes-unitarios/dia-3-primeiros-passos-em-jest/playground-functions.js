@@ -41,11 +41,9 @@ function decode(string) {
 // <- Funções Decode
 
 function techList(array, name) {
+  if (array.length === 0) return 'Vazio!';
   const sortedArray = array.sort();
   let arrayList = [];
-  if (array.length === 0) {
-    return 'Vazio!';
-  }
   for (let index = 0; index < sortedArray.length; index += 1) {
     let techObject = {
       tech: sortedArray[index],
