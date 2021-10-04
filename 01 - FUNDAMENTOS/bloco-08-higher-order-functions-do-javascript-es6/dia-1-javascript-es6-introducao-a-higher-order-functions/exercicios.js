@@ -56,3 +56,31 @@ const result = (number, check) => {
   // };
   // console.log(finalPoints(STUDENT_ANSWERS));
 // <------ Feito usando forEach()
+
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const isCorrect = (currAnswer, correct) => {
+  if (currAnswer === 'N.A') return;
+  if (currAnswer === correct) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const finalPoints = (template, answers, check) => {
+  let points = 0;
+  for (let i = 0; i < template.length; i += 1) {
+    if (check(answers[i], template[i]) === undefined) {
+      points = points;
+    } else if (check(answers[i], template[i])) {
+      points += 1;
+    } else {
+      points -= 0.5;
+    }
+  }
+  return points;
+};
+
+console.log(finalPoints(RIGHT_ANSWERS, STUDENT_ANSWERS, isCorrect));
