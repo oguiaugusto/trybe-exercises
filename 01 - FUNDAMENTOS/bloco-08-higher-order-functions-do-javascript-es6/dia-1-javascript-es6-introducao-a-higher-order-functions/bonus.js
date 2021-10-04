@@ -35,7 +35,7 @@ const warriorDamage = () => {
   return randomDamage;
 };
 
-const mageDamageAndMana = () => {
+const mageDamage = () => {
   const turnInfo = {};
   const minDValue = battleMembers.mage.intelligence;
   const maxDValue = minDValue * 2;
@@ -50,3 +50,32 @@ const mageDamageAndMana = () => {
   }
   return turnInfo;
 };
+
+// Parte II
+
+const gameActions = {
+  warriorTurn: (wDamage) => {
+    const damageValue = wDamage();
+    battleMembers.dragon.healthPoints -= damageValue;
+    battleMembers.warrior.damage = damageValue;
+  },
+  mageTurn: (mTurn) => {
+    const damageValue = mTurn().turnDamage;
+    if (Number.isNaN(damageValue)) return;
+    battleMembers.dragon.healthPoints -= damageValue;
+    battleMembers.mage.damage = damageValue;
+    battleMembers.mage.mana -= mTurn().spentMana;
+  },
+  dragonTurn: (dTurn) => {
+    const damageValue = dTurn();
+    battleMembers.warrior.healthPoints -= damageValue;
+    battleMembers.mage.healthPoints -= damageValue;
+    battleMembers.dragon.damage = damageValue;
+  },
+  currentGame: () => battleMembers,
+};
+
+gameActions.warriorTurn(warriorDamage);
+gameActions.mageTurn(mageDamage);
+gameActions.dragonTurn(dragonDamage);
+console.log(gameActions.currentGame());
