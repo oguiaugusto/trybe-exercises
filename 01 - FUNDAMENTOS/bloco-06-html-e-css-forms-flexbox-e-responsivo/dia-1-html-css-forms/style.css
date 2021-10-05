@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+body {
+  text-align: center;
+  background-color: rgb(79, 134, 79);
+  font-family: Lato, sans-serif;
+}
+
+header, section {
+  width: 80%;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 30px;
+}
+
+form {
+  text-align: left;
+}
+
+.form-line {
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.form-line:last-child {
+  margin-bottom: 10px;
+}
+
+.form-row {
+  margin-bottom: 20px;
+}
+
+input[type="text"], input[type="email"], select {
+  padding: 3px 2px;
+  margin-left: 3px;
+  margin-right: 10px;
+}
+
+#name {
+  width: 60%;
+}
+
+#email {
+  width: 30%;
+}
+
+#address {
+  width: 55%;
+}
+
+.type-class {
+  margin-right: 10px;
+}
+
+#type-content {
+  display: inline;
+}
+
+#resume-line {
+  margin: 0;
+}
+
+#resume-line label {
+  margin-left: 20px;
+}
+
+#resume-content {
+  margin: 0;
+  width: 95%;
+  margin: 3px auto;
+}
+
+#resume {
+  width: 100%;
+  margin-top: 5px;
+  resize: vertical;
+  padding: 5px;
+}
+
+.field {
+  padding: 20px 0;
+}
+
+legend {
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  color: grey;
+}
+
+input[type="text"], input[type="email"], select, textarea, optgroup {
+  border-radius: 8px;
+  border: 1px solid rgb(148, 148, 148);
+  padding-left: 5px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea {
+  outline: none;
+  box-shadow: 0 0 2px black;
+}
+
+.button {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sub-button {
+  padding: 10px 15px;
+  border: 3px solid rgb(79, 134, 79);
+  border-radius: 10px;
+  background-color: rgb(240, 240, 240);
+  transition-duration: 0.4s;
+}
+
+#sub-button:hover {
+  color: rgb(240, 240, 240);
+  background-color: rgb(79, 134, 79);
+}
+
+#sub-button:active {
+  color: rgb(240, 240, 240);
+  background-color: rgb(58, 102, 58);
+  border-color: rgb(58, 102, 58);
+}
+
+#start-date {
+  margin-right: 2px;
+}
+
+#clear-date {
+  font-size: 8px;
+  vertical-align: middle;
+  margin-bottom: 2px;
+  padding: 2px;
+  border: 1px solid rgb(175, 91, 91);
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  transition-duration: 0.4s;
+}
+
+#clear-date:hover {
+  background-color:  rgb(175, 91, 91);
+  color: rgb(240, 240, 240);
+}
+
+#clear-date:active {
+  background-color:  rgb(143, 67, 67);
+  color: rgb(240, 240, 240);
+  border-color: rgb(143, 67, 67);
+}
+
+#first-container {
+  margin-bottom: 40px;
+}
+
+.output-line {
+  font-family: Roboto Mono, monospace;
+  text-align: center;
+}
+
+.output-box {
+  border: 1px solid black;
+  padding: 10px 20%;
+  font-family: Roboto Mono, monospace;
+  text-align: left;
+}
+
+#clear-all {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: 3px solid rgb(175, 91, 91);
+  background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+  transition-duration: 0.4s;
+}
+
+#clear-all:hover {
+  background-color:  rgb(175, 91, 91);
+  color: rgb(240, 240, 240);
+}
+
+#clear-all:active {
+  background-color:  rgb(143, 67, 67);
+  color: rgb(240, 240, 240);
+  border-color: rgb(143, 67, 67);
+}
