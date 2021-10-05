@@ -31,6 +31,16 @@ const names = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
 const hasName = (arr, name) => arr.some((currName) => currName === name);
 // console.log(hasName(names, 'Ana'));
 
+// const people = [
+//   { name: 'Mateus', age: 18 },
+//   { name: 'José', age: 16 },
+//   { name: 'Ana', age: 23 },
+//   { name: 'Cláudia', age: 20 },
+//   { name: 'Bruna', age: 19 },
+// ];
+const verifyAges = (arr, minimumAge) => arr.every((person) => person.age >= minimumAge)
+// console.log(verifyAges(people, 18));
+
 const people = [
   { name: 'Mateus', age: 18 },
   { name: 'José', age: 16 },
@@ -38,5 +48,17 @@ const people = [
   { name: 'Cláudia', age: 20 },
   { name: 'Bruna', age: 19 },
 ];
-const verifyAges = (arr, minimumAge) => arr.every((person) => person.age >= minimumAge)
-console.log(verifyAges(people, 18));
+// --> ordem crescente 
+people.sort((a, b) => {
+  if (a.age > b.age) return 1;
+  if (a.age < b.age) return -1;
+  return 0;
+});
+console.table(people);
+// --> ordem decrescente
+people.sort((a, b) => {
+  if (a.age > b.age) return -1;
+  if (a.age < b.age) return 1;
+  return 0;
+})
+console.table(people);
