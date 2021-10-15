@@ -44,7 +44,19 @@ const sendMarsTemperature = (onSucess, onError) => {
 }
 
 // imprime "It is currently 47ºF at Mars", por exemplo, ou "Error getting temperature: Robot is busy"
-sendMarsTemperature(temperatureInFahrenheit, handleError);
+// sendMarsTemperature(temperatureInFahrenheit, handleError);
 
 // imprime "Hi there! Curiosity here. Right now is 53ºC at Mars", por exemplo, ou "Error getting temperature: Robot is busy"
-sendMarsTemperature(greet, handleError);
+// sendMarsTemperature(greet, handleError);
+
+// ----
+
+const uppercase = (str, callback) => {
+  setTimeout(() => {
+    callback(str.toUpperCase());
+  }, 500);
+};
+
+// const printMessage = (message) => console.log(message);
+
+module.exports = { uppercase };
