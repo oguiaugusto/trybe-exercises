@@ -1,0 +1,15 @@
+{
+  "name": "dia-1-javascript-assincrono-e-callbacks",
+  "version": "1.0.0",
+  "description": "jest aula 9.1 sd trybe",
+  "main": "fixacao-1.1.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.2.5"
+  }
+}
