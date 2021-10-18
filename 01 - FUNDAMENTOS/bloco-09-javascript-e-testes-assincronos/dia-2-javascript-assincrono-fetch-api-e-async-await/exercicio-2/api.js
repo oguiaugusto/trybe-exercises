@@ -7,13 +7,20 @@ const addCurrecy = (item) => {
 
 let topTenCurrencies = [];
 
-const getCurrencies = (currencies) => {
-  currencies.forEach((currency) => {
-    const { name, symbol, priceUsd } = currency;
-    const price = parseFloat(priceUsd).toFixed(2);
-    const formatedCurrency = `${name} (${symbol}): ${price}`;
-    addCurrecy(formatedCurrency);
-  });
+const getCurrencies = async (currencies) => {
+  const url = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd/brl.json';
+  await fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      const brlValue = data.brl;
+      currencies.forEach((currency) => {
+        const { name, symbol, priceUsd } = currency;
+        const usdValue = parseFloat(priceUsd);
+        const price = (usdValue * brlValue).toFixed(2);
+        const formatedCurrency = `${name} (${symbol}): R$ ${price}`;
+        addCurrecy(formatedCurrency);
+      });
+    });
 };
 
 const getData = async () => {
