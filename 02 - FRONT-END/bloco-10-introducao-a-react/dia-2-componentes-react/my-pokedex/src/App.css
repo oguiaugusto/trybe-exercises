@@ -34,3 +34,9 @@
     flex: 1 1 auto;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .pokemon {
+    width: 30%;
+  }
+}
