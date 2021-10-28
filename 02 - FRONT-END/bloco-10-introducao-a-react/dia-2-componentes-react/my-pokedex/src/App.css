@@ -23,3 +23,14 @@
 .pokemon .pokemon-info {
   text-align: center;
 }
+
+@media screen and (min-width: 768px) {
+  .pokedex {
+    justify-content: space-around;
+  }
+  .pokemon {
+    width: 45%;
+    margin: 0 0.5rem 1rem;
+    flex: 1 1 auto;
+  }
+}
