@@ -16,20 +16,44 @@ class App extends React.Component {
     this.handleClick3 = this.handleClick3.bind(this);
   }
 
-  handleClick1() {
+  handleClick1(e) {
     this.setState((prevState, _props) => ({
       button1: prevState.button1 + 1,
     }));
+
+    const button = e.target;
+
+    if ((this.state.button1 % 2 - 1) === 0 && this.state.button1 !== 0) {
+      button.classList.add('green-button');
+    } else {
+      button.classList.remove('green-button');
+    }
   }
-  handleClick2() {
+  handleClick2(e) {
     this.setState((prevState, _props) => ({
       button2: prevState.button2 + 1,
     }));
+    
+    const button = e.target;
+
+    if ((this.state.button2 % 2 - 1) === 0 && this.state.button2 !== 0) {
+      button.classList.add('green-button');
+    } else {
+      button.classList.remove('green-button');
+    }
   }
-  handleClick3() {
+  handleClick3(e) {
     this.setState((prevState, _props) => ({
       button3: prevState.button3 + 1,
     }));
+    
+    const button = e.target;
+
+    if ((this.state.button3 % 2 - 1) === 0 && this.state.button3 !== 0) {
+      button.classList.add('green-button');
+    } else {
+      button.classList.remove('green-button');
+    }
   }
 
   render() {
