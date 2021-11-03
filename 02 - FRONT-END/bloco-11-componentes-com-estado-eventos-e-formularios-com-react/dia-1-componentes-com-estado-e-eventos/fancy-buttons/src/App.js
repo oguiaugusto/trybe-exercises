@@ -28,6 +28,9 @@ class App extends React.Component {
     } else {
       button.classList.remove('green-button');
     }
+
+    const bg = window.getComputedStyle(button).getPropertyValue('background-color');
+    console.log(`Cor de fundo: ${bg}`);
   }
   handleClick2(e) {
     this.setState((prevState, _props) => ({
@@ -41,6 +44,9 @@ class App extends React.Component {
     } else {
       button.classList.remove('green-button');
     }
+
+    const bg = window.getComputedStyle(button).getPropertyValue('background-color');
+    console.log(`Cor de fundo: ${bg}`);
   }
   handleClick3(e) {
     this.setState((prevState, _props) => ({
@@ -54,6 +60,9 @@ class App extends React.Component {
     } else {
       button.classList.remove('green-button');
     }
+    
+    const bg = window.getComputedStyle(button).getPropertyValue('background-color');
+    console.log(`Cor de fundo: ${bg}`);
   }
 
   render() {
