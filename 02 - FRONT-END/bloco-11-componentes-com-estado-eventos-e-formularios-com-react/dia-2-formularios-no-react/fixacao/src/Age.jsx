@@ -5,7 +5,7 @@ class Age extends React.Component {
     const { value, handleChange } = this.props;
 
     let error = undefined;
-    if (isNaN(value) || value === 0) error = 'Idade inválida!';
+    if (value.length === 0) error = 'Idade inválida!';
 
     return (
       <div>

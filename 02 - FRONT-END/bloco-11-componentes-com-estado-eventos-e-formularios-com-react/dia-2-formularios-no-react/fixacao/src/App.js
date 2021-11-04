@@ -10,13 +10,15 @@ class App extends React.Component {
 
     this.state = {
       nameInput: '',
-      age: 0,
+      age: '',
       fruits: '',
       comment: '',
       everythingOk: false,
+      formularioComErros: true,
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleErrors = this.handleErrors.bind(this);
   }
 
   handleChange({ target }) {
@@ -26,6 +28,24 @@ class App extends React.Component {
     this.setState({ [name]: value });
   }
 
+  handleErrors() {
+    const { nameInput, age, fruits, comment, everythingOk } = this.state;
+
+    const errorCases = [
+      !nameInput.length,
+      !age.length,
+      !fruits.length,
+      !comment.length,
+      !everythingOk,
+    ];
+
+    const formularioPreenchido = errorCases.every((error) => error === true);
+
+    this.setState({
+      formularioComErros: false,
+    });
+  }
+
   render() {
     return (
       <>
@@ -33,8 +53,8 @@ class App extends React.Component {
         <form>
           <fieldset>
             <legend>Sobre Você</legend>
-            <Name value={this.state.nameInput} handleChange={this.handleChange} />
-            <Age value={this.state.age} handleChange={this.handleChange} />
+            <Name value={this.state.nameInput} handleChange={this.handleChange} handleErrors={this.handleErrors} />
+            <Age value={this.state.age} handleChange={this.handleChange} handleErrors={this.handleErrors} />
           </fieldset>
           <fieldset>
             <legend>Algumas preferências</legend>
@@ -47,7 +67,7 @@ class App extends React.Component {
                 <option>Laranja</option>
               </select>
             </div>
-            <Comment value={this.state.comment} handleChange={this.handleChange} />
+            <Comment value={this.state.comment} handleChange={this.handleChange} handleErrors={this.handleErrors} />
           </fieldset>
           <fieldset>
             <legend>Algo a adicionar?</legend>
