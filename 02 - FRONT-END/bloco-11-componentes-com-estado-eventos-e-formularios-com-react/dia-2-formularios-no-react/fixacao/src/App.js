@@ -10,6 +10,7 @@ class App extends React.Component {
       age: 0,
       fruits: '',
       comment: '',
+      everythingOk: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -47,6 +48,10 @@ class App extends React.Component {
           <div>
             <label for="comment">Diga algo</label>
             <textarea id="comment" name="comment" rows="4" cols="25" value={this.state.comment} onChange={this.handleChange} ></textarea>
+          </div>
+          <div>
+            <label for="everythingOk">Tudo certo?</label>
+            <input type="checkbox" id="everythingOk" name="everythingOk" checked={this.state.everythingOk} onChange={this.handleChange}></input>
           </div>
         </form>
       </>
