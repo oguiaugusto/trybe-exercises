@@ -6,29 +6,20 @@ class App extends React.Component {
     super()
 
     this.state = {
-      name: '',
+      nameInput: '',
       age: 0,
-      fruit: '',
+      fruits: '',
       comment: '',
     };
 
-    this.handleChangeName = this.handleChangeName.bind(this);
-    this.handleChangeAge = this.handleChangeAge.bind(this);
-    this.handleChangeFruit = this.handleChangeFruit.bind(this);
-    this.handleChangeComment = this.handleChangeComment.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChangeName(e) {
-    this.setState({ name: e.target.value });
-  }
-  handleChangeAge(e) {
-    this.setState({ age: e.target.value });
-  }
-  handleChangeFruit(e) {
-    this.setState({ fruit: e.target.value });
-  }
-  handleChangeComment(e) {
-    this.setState({ comment: e.target.value });
+  handleChange({ target }) {
+    const { name } = target;
+    const value = (target.type === 'checkbox') ? target.checked : target.value;
+
+    this.setState({ [name]: value });
   }
 
   render() {
@@ -37,16 +28,16 @@ class App extends React.Component {
         <h1>Formulário qualquer</h1>
         <form>
           <div>
-            <label for="name">Insira seu nome</label>
-            <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChangeName} />
+            <label for="nameInput">Insira seu nome</label>
+            <input type="text" id="nameInput" name="nameInput" value={this.state.name} onChange={this.handleChange} />
           </div>
           <div>
             <label for="age">Insira sua idade</label>
-            <input type="number" id="age" name="age" value={this.state.age} onChange={this.handleChangeAge} />
+            <input type="number" id="age" name="age" value={this.state.age} onChange={this.handleChange} />
           </div>
           <div>
             <label for="fruits">Selecione uma fruta</label>
-            <select name="fruits" id="fruits" value={this.state.fruit} onChange={this.handleChangeFruit}>
+            <select name="fruits" id="fruits" value={this.state.fruit} onChange={this.handleChange}>
               <option>Banana</option>
               <option>Maçã</option>
               <option>Uva</option>
@@ -55,7 +46,7 @@ class App extends React.Component {
           </div>
           <div>
             <label for="comment">Diga algo</label>
-            <textarea id="comment" name="comment" rows="4" cols="25" value={this.state.comment} onChange={this.handleChangeComment} ></textarea>
+            <textarea id="comment" name="comment" rows="4" cols="25" value={this.state.comment} onChange={this.handleChange} ></textarea>
           </div>
         </form>
       </>
