@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Name from './Name';
+import Age from './Age';
 
 class App extends React.Component {
   constructor() {
@@ -30,14 +32,8 @@ class App extends React.Component {
         <form>
           <fieldset>
             <legend>Sobre Você</legend>
-            <div>
-              <label for="nameInput">Insira seu nome</label>
-              <input type="text" id="nameInput" name="nameInput" value={this.state.name} onChange={this.handleChange} />
-            </div>
-            <div>
-              <label for="age">Insira sua idade</label>
-              <input type="number" id="age" name="age" value={this.state.age} onChange={this.handleChange} />
-            </div>
+            <Name value={this.state.nameInput} handleChange={this.handleChange} />
+            <Age value={this.state.age} handleChange={this.handleChange} />
           </fieldset>
           <fieldset>
             <legend>Algumas preferências</legend>
