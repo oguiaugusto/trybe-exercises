@@ -13,3 +13,9 @@ form div label {
 fieldset {
   margin: 2rem;
 }
+
+.errorSpan {
+  font-size: small;
+  color: red;
+  margin: 0 0.5rem;
+}

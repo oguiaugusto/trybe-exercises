@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Name from './Name';
 import Age from './Age';
+import Comment from './Comment';
 
 class App extends React.Component {
   constructor() {
@@ -46,10 +47,7 @@ class App extends React.Component {
                 <option>Laranja</option>
               </select>
             </div>
-            <div>
-              <label for="comment">Diga algo</label>
-              <textarea id="comment" name="comment" rows="4" cols="25" value={this.state.comment} onChange={this.handleChange} ></textarea>
-            </div>
+            <Comment value={this.state.comment} handleChange={this.handleChange} />
           </fieldset>
           <fieldset>
             <legend>Algo a adicionar?</legend>
