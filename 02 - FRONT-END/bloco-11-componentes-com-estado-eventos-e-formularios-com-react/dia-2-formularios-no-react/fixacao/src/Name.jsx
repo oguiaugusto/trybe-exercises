@@ -9,7 +9,7 @@ class Name extends React.Component {
 
     return (
       <div>
-        <label for="nameInput">Insira seu nome</label>
+        <label htmlFor="nameInput">Insira seu nome</label>
         <input type="text" id="nameInput" name="nameInput" value={value} onChange={handleChange} />
         <span className="errorSpan">{error ? error : ''}</span>
       </div>

@@ -9,7 +9,7 @@ class Comment extends React.Component {
 
     return (
       <div>
-        <label for="comment">Diga algo</label>
+        <label htmlFor="comment">Diga algo</label>
         <textarea id="comment" name="comment" rows="4" cols="25" value={value} onChange={handleChange} />
         <span className="errorSpan">{error ? error : ''}</span>
       </div>

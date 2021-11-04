@@ -9,7 +9,7 @@ class Age extends React.Component {
 
     return (
       <div>
-        <label for="age">Insira sua idade</label>
+        <label htmlFor="age">Insira sua idade</label>
         <input type="number" id="age" name="age" value={value} onChange={handleChange} />
         <span className="errorSpan">{error ? error : ''}</span>
       </div>

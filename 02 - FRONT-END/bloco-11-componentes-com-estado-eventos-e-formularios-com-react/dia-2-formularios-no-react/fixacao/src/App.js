@@ -39,7 +39,7 @@ class App extends React.Component {
           <fieldset>
             <legend>Algumas preferências</legend>
             <div>
-              <label for="fruits">Selecione uma fruta</label>
+              <label htmlFor="fruits">Selecione uma fruta</label>
               <select name="fruits" id="fruits" value={this.state.fruit} onChange={this.handleChange}>
                 <option>Banana</option>
                 <option>Maçã</option>
@@ -52,11 +52,11 @@ class App extends React.Component {
           <fieldset>
             <legend>Algo a adicionar?</legend>
             <div>
-              <label for="everythingOk">Tudo certo?</label>
+              <label htmlFor="everythingOk">Tudo certo?</label>
               <input type="checkbox" id="everythingOk" name="everythingOk" checked={this.state.everythingOk} onChange={this.handleChange}></input>
             </div>
             <div>
-              <label for="shareFile">Algum arquivo que queira compartilhar?</label>
+              <label htmlFor="shareFile">Algum arquivo que queira compartilhar?</label>
               <input type="file" id="shareFile" name="shareFile"></input>
             </div>
           </fieldset>
