@@ -9,3 +9,7 @@ form div {
 form div label {
   margin-right: 0.5rem;
 }
+
+fieldset {
+  margin: 2rem;
+}
