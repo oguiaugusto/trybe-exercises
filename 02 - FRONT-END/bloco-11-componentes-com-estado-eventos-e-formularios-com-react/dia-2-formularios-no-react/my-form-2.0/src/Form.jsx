@@ -1,6 +1,7 @@
 import React from 'react';
 import PersonalData from './PersonalData';
 import LastJob from './LastJob';
+import Buttons from './Buttons';
 
 class Form extends React.Component {
   constructor() {
@@ -19,11 +20,15 @@ class Form extends React.Component {
       role: '',
       mouseEnterRole: 0,
       roleDescription: '',
+
+      outputDisplayMode: 'd-none',
     }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleCityBlur = this.handleCityBlur.bind(this);
-    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseClick = this.handleMouseClick.bind(this);
+    this.handleSubmitClick = this.handleSubmitClick.bind(this);
+    this.handleClearButton = this.handleClearButton.bind(this);
   }
 
   handleChange({ target }) {
@@ -45,7 +50,7 @@ class Form extends React.Component {
     }
   }
 
-  handleMouseEnter({ target }) {
+  handleMouseClick() {
     const { mouseEnterRole } = this.state;
 
     if (mouseEnterRole === 0) {
@@ -54,13 +59,57 @@ class Form extends React.Component {
     }
   }
 
+  handleSubmitClick(e) {
+    e.preventDefault();
+    const { name, email, cpf, address, city, states, type, resume, role, roleDescription } = this.state;
+
+    const reqStates = [
+      !name.length,
+      !email.length,
+      !cpf.length,
+      !address.length,
+      !city.length,
+      !states.length,
+      !type.length,
+      !resume.length,
+      !role.length,
+      !roleDescription.length,
+    ];
+
+    const allFilled = reqStates.every((state) => state === true);
+
+    console.log(allFilled);
+
+    if (!allFilled) {
+      this.setState({ outputDisplayMode: 'd-block'});
+    }
+  }
+
+  handleClearButton() {
+    this.setState({
+      name: '',
+      email: '',
+      cpf: '',
+      address: '',
+      city: '',
+      states: '',
+      type: '',
+      resume: '',
+      role: '',
+      roleDescription: '',
+      outputDisplayMode: 'd-none',
+    });
+  }
+
   render() {
-    const { handleChange, handleCityBlur, handleMouseEnter } = this;
+    const { handleChange, handleCityBlur, handleMouseClick, handleSubmitClick, handleClearButton } = this;
 
     return (
       <form className="form">
         <PersonalData value={this.state} handleChange={handleChange} handleCityBlur={handleCityBlur} />
-        <LastJob value={this.state} handleChange={handleChange} handleMouseEnter={handleMouseEnter} />
+        <LastJob value={this.state} handleChange={handleChange} handleMouseClick={handleMouseClick} />
+        <hr />
+        <Buttons handleSubmitClick={handleSubmitClick} handleClearButton={handleClearButton} data={this.state} displayMode={this.state.outputDisplayMode} />
       </form>
     );
   }

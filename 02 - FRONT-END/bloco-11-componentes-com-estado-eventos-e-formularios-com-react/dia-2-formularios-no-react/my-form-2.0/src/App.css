@@ -1,6 +1,6 @@
 .form {
   width: 70%;
-  margin: auto;
+  margin: 0 auto 5rem;
 }
 
 .form .container .row {
@@ -21,3 +21,6 @@
   max-height: 10rem;
 }
 
+.buttons-container button {
+  margin: 0 1rem;
+}

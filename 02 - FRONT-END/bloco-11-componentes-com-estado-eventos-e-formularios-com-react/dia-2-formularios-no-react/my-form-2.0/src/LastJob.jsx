@@ -2,7 +2,7 @@ import React from 'react';
 
 class LastJob extends React.Component {
   render() {
-    const { value, handleChange, handleMouseEnter } = this.props;
+    const { value, handleChange, handleMouseClick } = this.props;
     const { resume, role, roleDescription } = value;
     
     return (
@@ -33,7 +33,7 @@ class LastJob extends React.Component {
                   id="role"
                   value={role}
                   onChange={handleChange}
-                  onMouseEnter={handleMouseEnter}
+                  onClick={handleMouseClick}
                   maxLength="40"
                   required
                 />

@@ -4,10 +4,6 @@ import Header from './Header';
 import Form from './Form';
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {  }
-  }
   render() { 
     return (
       <>
