@@ -3,8 +3,8 @@ import AddressInputs from './AddressInputs';
 
 class PersonalData extends React.Component {
   render() {
-    const { value, handleChange, handleCityBlur } = this.props;
-    const { name, email, cpf, address, city, states, type } = value;
+    const { value, handleChange, handleChangeEmail, handleCityBlur } = this.props;
+    const { name, email, cpf, address, city, states, type, emailFieldClass } = value;
     const addressInputs = { address, city, states, type };
     
     return (
@@ -30,13 +30,13 @@ class PersonalData extends React.Component {
             <div className="col-8">
               <label className="form-label" htmlFor="email">Email:</label>
               <input
-                className="form-control"
+                className={emailFieldClass}
                 type="text"
                 name="email"
                 id="email"
                 maxLength="50"
                 value={email}
-                onChange={handleChange}
+                onChange={handleChangeEmail}
                 required
               />
             </div>

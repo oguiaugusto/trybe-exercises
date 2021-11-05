@@ -21,10 +21,12 @@ class Form extends React.Component {
       mouseEnterRole: 0,
       roleDescription: '',
 
+      emailFieldClass: 'form-control wrongField',
       outputDisplayMode: 'd-none',
     }
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleChangeEmail = this.handleChangeEmail.bind(this);
     this.handleCityBlur = this.handleCityBlur.bind(this);
     this.handleMouseClick = this.handleMouseClick.bind(this);
     this.handleSubmitClick = this.handleSubmitClick.bind(this);
@@ -36,6 +38,16 @@ class Form extends React.Component {
     const value = (type === 'checkbox') ? target.checkbox : target.value;
 
     this.setState({ [name]: value });
+  }
+
+  handleChangeEmail({ target: { value } }) {
+    const email = value.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/igm);
+    
+    if (email !== null) {
+      this.setState({ emailFieldClass: 'form-control' });
+    }
+    
+    this.setState({ email: value });
   }
 
   handleCityBlur({ target }) {
@@ -102,11 +114,11 @@ class Form extends React.Component {
   }
 
   render() {
-    const { handleChange, handleCityBlur, handleMouseClick, handleSubmitClick, handleClearButton } = this;
+    const { handleChange, handleChangeEmail, handleCityBlur, handleMouseClick, handleSubmitClick, handleClearButton } = this;
 
     return (
       <form className="form">
-        <PersonalData value={this.state} handleChange={handleChange} handleCityBlur={handleCityBlur} />
+        <PersonalData value={this.state} handleChange={handleChange} handleCityBlur={handleCityBlur} handleChangeEmail={handleChangeEmail} />
         <LastJob value={this.state} handleChange={handleChange} handleMouseClick={handleMouseClick} />
         <hr />
         <Buttons handleSubmitClick={handleSubmitClick} handleClearButton={handleClearButton} data={this.state} displayMode={this.state.outputDisplayMode} />

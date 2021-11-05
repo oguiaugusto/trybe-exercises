@@ -24,3 +24,8 @@
 .buttons-container button {
   margin: 0 1rem;
 }
+
+.wrongField:focus {
+  border-color: rgb(223, 83, 83);
+  box-shadow: 0 0 0 0.25rem rgb(223 83 83 / 25%);
+}
