@@ -76,23 +76,26 @@ class Form extends React.Component {
     const { name, email, cpf, address, city, states, type, resume, role, roleDescription } = this.state;
 
     const reqStates = [
-      !name.length,
-      !email.length,
-      !cpf.length,
-      !address.length,
-      !city.length,
-      !states.length,
-      !type.length,
-      !resume.length,
-      !role.length,
-      !roleDescription.length,
+      name === '',
+      cpf === '',
+      address === '',
+      city === '',
+      states === '',
+      type === '',
+      resume === '',
+      role === '',
+      roleDescription === '',
     ];
 
-    const allFilled = reqStates.every((state) => state === true);
+    const emailMatch = email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/igm) !== null;
+
+    const allFilled = reqStates.every((state) => state !== true);
 
     console.log(allFilled);
+    console.log(emailMatch);
 
-    if (!allFilled) {
+    if (allFilled && emailMatch) {
+      console.log('liberado');
       this.setState({ outputDisplayMode: 'd-block'});
     }
   }
@@ -121,7 +124,12 @@ class Form extends React.Component {
         <PersonalData value={this.state} handleChange={handleChange} handleCityBlur={handleCityBlur} handleChangeEmail={handleChangeEmail} />
         <LastJob value={this.state} handleChange={handleChange} handleMouseClick={handleMouseClick} />
         <hr />
-        <Buttons handleSubmitClick={handleSubmitClick} handleClearButton={handleClearButton} data={this.state} displayMode={this.state.outputDisplayMode} />
+        <Buttons
+          handleSubmitClick={handleSubmitClick}
+          handleClearButton={handleClearButton}
+          data={this.state}
+          displayMode={this.state.outputDisplayMode}
+        />
       </form>
     );
   }
