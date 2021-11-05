@@ -6,3 +6,18 @@
 .form .container .row {
   margin: 1rem 0;
 }
+
+.form .textareaLabel {
+  margin-left: 0.8rem;
+}
+
+.form .resumeTextArea {
+  min-height: 10rem;
+  max-height: 15rem;
+}
+
+.form .roleTextarea {
+  min-height: 7rem;
+  max-height: 10rem;
+}
+

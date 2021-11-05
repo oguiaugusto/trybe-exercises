@@ -1,5 +1,6 @@
 import React from 'react';
 import PersonalData from './PersonalData';
+import LastJob from './LastJob';
 
 class Form extends React.Component {
   constructor() {
@@ -13,10 +14,16 @@ class Form extends React.Component {
       city: '',
       states: '',
       type: '',
+
+      resume: '',
+      role: '',
+      mouseEnterRole: 0,
+      roleDescription: '',
     }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleCityBlur = this.handleCityBlur.bind(this);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
   }
 
   handleChange({ target }) {
@@ -38,12 +45,22 @@ class Form extends React.Component {
     }
   }
 
+  handleMouseEnter({ target }) {
+    const { mouseEnterRole } = this.state;
+
+    if (mouseEnterRole === 0) {
+      alert('Preencha com cuidado esta informação.');
+      this.setState({ mouseEnterRole: 1 });
+    }
+  }
+
   render() {
-    const { handleChange, handleCityBlur } = this;
+    const { handleChange, handleCityBlur, handleMouseEnter } = this;
 
     return (
       <form className="form">
         <PersonalData value={this.state} handleChange={handleChange} handleCityBlur={handleCityBlur} />
+        <LastJob value={this.state} handleChange={handleChange} handleMouseEnter={handleMouseEnter} />
       </form>
     );
   }
