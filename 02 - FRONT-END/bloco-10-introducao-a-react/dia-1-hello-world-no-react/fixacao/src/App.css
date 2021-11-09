@@ -1,0 +1,9 @@
+.about-me {
+  color: #eee;
+  background-color: rgb(41, 41, 41);
+  text-align: center;
+  padding: 1rem;
+  width: max-content;
+  margin: 2rem auto;
+  border-radius: 1rem;
+}

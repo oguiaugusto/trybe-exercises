@@ -1,0 +1,18 @@
+button {
+  margin: 2rem;
+  margin-bottom: 0;
+  padding: 2rem;
+}
+
+div {
+  display: inline-block;
+}
+
+p {
+  text-align: center;
+}
+
+.green-button {
+  background-color: #3b793b;
+  color: #eeeeee;
+}

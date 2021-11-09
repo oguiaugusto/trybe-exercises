@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+}
+
+form div {
+  margin: 1rem;
+}
+
+form div label {
+  margin-right: 0.5rem;
+}
+
+fieldset {
+  margin: 2rem;
+}
+
+.errorSpan {
+  font-size: small;
+  color: red;
+  margin: 0 0.5rem;
+}

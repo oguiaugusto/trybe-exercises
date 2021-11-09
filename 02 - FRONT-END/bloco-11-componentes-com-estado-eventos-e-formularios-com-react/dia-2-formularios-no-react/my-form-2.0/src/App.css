@@ -1,0 +1,31 @@
+.form {
+  width: 70%;
+  margin: 0 auto 5rem;
+}
+
+.form .container .row {
+  margin: 1rem 0;
+}
+
+.form .textareaLabel {
+  margin-left: 0.8rem;
+}
+
+.form .resumeTextArea {
+  min-height: 10rem;
+  max-height: 15rem;
+}
+
+.form .roleTextarea {
+  min-height: 7rem;
+  max-height: 10rem;
+}
+
+.buttons-container button {
+  margin: 0 1rem;
+}
+
+.wrongField:focus {
+  border-color: rgb(223, 83, 83);
+  box-shadow: 0 0 0 0.25rem rgb(223 83 83 / 25%);
+}

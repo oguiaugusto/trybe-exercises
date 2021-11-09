@@ -1,0 +1,42 @@
+.title {
+  text-align: center;
+}
+
+.pokedex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 95%;
+  margin: auto;
+}
+
+.pokemon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid rgb(26, 26, 26);
+  width: 100%;
+  border-radius: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.pokemon .pokemon-info {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .pokedex {
+    justify-content: space-around;
+  }
+  .pokemon {
+    width: 45%;
+    margin: 0 0.5rem 1rem;
+    flex: 1 1 auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .pokemon {
+    width: 30%;
+  }
+}

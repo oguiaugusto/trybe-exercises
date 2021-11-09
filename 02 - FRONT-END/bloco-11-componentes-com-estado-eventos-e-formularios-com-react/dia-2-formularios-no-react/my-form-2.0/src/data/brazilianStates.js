@@ -1,0 +1,31 @@
+const brStates = [
+  { state: 'Acre', postal: 'ac' },
+  { state: 'Alagoas', postal: 'al' },
+  { state: 'Amapá', postal: 'ap' },
+  { state: 'Amazonas', postal: 'am' },
+  { state: 'Bahia', postal: 'ba' },
+  { state: 'Ceará', postal: 'ce' },
+  { state: 'Espírito Santo', postal: 'es' },
+  { state: 'Goiás', postal: 'go' },
+  { state: 'Maranhão', postal: 'ma' },
+  { state: 'Mato Grosso', postal: 'mt' },
+  { state: 'Mato Grosso do Sul', postal: 'ms' },
+  { state: 'Minas Gerais', postal: 'mg' },
+  { state: 'Pará', postal: 'pa' },
+  { state: 'Paraíba', postal: 'pb' },
+  { state: 'Paraná', postal: 'pr' },
+  { state: 'Pernambuco', postal: 'pe' },
+  { state: 'Piauí', postal: 'pi' },
+  { state: 'Rio de Janeiro', postal: 'rj' },
+  { state: 'Rio Grande do Norte', postal: 'rn' },
+  { state: 'Rio Grande do Sul', postal: 'rs' },
+  { state: 'Rondônia', postal: 'ro' },
+  { state: 'Roraima', postal: 'rr' },
+  { state: 'Santa Catarina', postal: 'sc' },
+  { state: 'São Paulo', postal: 'sp' },
+  { state: 'Sergipe', postal: 'se' },
+  { state: 'Tocantins', postal: 'to' },
+  { state: 'Distrito Federal', postal: 'df' }
+]
+
+module.exports = { brStates };
