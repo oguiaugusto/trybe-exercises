@@ -1,27 +1,22 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import App from './App';
 
-afterEach(() => jest.clearAllMocks());
+test('alterando o valor dos campos e testando o valor guardado', () => {
+  const { getByRole } = render(<App />);
 
-it('fetches a joke', async () => {
-  const joke = {
-    id: '7h3oGtrOfxc',
-    joke: 'Whiteboards ... are remarkable.',
-    status: 200,
-  };
+  const inputName = getByRole('textbox', { name: /nome/i });
+  expect(inputName).toBeInTheDocument();
+  expect(inputName).toHaveValue('');
 
-  jest.spyOn(global, 'fetch');
-  global.fetch.mockResolvedValue({
-    json: jest.fn().mockResolvedValue(joke),
-  });
+  userEvent.type(inputName, 'Estudante da Trybe');
+  expect(inputName).toHaveValue('Estudante da Trybe');
 
-  render(<App />);
-  const renderedJoke = await screen.findByText('Whiteboards ... are remarkable.');
-  expect(renderedJoke).toBeInTheDocument();
-  expect(global.fetch).toHaveBeenCalledTimes(1);
-  expect(global.fetch).toBeCalledWith(
-    'https://icanhazdadjoke.com/',
-    { headers: { Accept: 'application/json' } },
-  );
+  const inputEmail = getByRole('textbox', { name: /email/i });
+  expect(inputEmail).toBeInTheDocument();
+  expect(inputEmail).toHaveValue('');
+
+  userEvent.type(inputEmail, 'estudante@trybe.com');
+  expect(inputEmail).toHaveValue('estudante@trybe.com');
 });
