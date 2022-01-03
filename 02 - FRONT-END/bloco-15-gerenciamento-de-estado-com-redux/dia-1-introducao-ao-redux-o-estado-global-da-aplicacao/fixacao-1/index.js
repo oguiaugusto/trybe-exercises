@@ -18,6 +18,6 @@ const reducer = (state = INITIAL_STATE, action) => {
 
 const store = Redux.createStore(reducer);
 
-console.log(store.getState());
+store.subscribe(() => console.log(store.getState()));
+
 store.dispatch(logIn('algumemail@email.com'));
-console.log(store.getState());
