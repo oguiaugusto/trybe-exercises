@@ -96,25 +96,25 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ##### Bloco 12: Ciclo de Vida de Componentes e React Router
 
 - [x] 12-1: _Ciclo de vida de componentes_
-- [ ] 12-2: _React Router_
-- [ ] 12-3: _[Projeto - TrybeTunes]()_
+- [x] 12-2: _React Router_
+- [x] 12-3: _[Projeto - TrybeTunes](https://github.com/tryber/sd-016-a-project-trybetunes/tree/guilherme-augusto-trybetunes)_
 
 ##### Bloco 13: Metodologias Ágeis
 
-- [ ] 13-1: _Metodologias Ágeis_
-- [ ] 13-2: _[Projeto - Frontend Online Store]()_
+- [x] 13-1: _Metodologias Ágeis_
+- [x] 13-2: _[Projeto - Frontend Online Store](https://github.com/tryber/sd-016-a-project-frontend-online-store/tree/main-group-16-product)_
 
 ##### Bloco 14: Testes automatizados com React Testing Library
 
-- [ ] 14-1: _RTL - Primeiros Passos_
-- [ ] 14-2: _RTL - Mocks e Inputs_
-- [ ] 14-3: _RTL - Testando React Router_
-- [ ] 14-4: _[Projeto - Testes em React]()_
+- [x] 14-1: _RTL - Primeiros Passos_
+- [x] 14-2: _RTL - Mocks e Inputs_
+- [x] 14-3: _RTL - Testando React Router_
+- [x] 14-4: _[Projeto - Testes em React](https://github.com/tryber/sd-016-a-project-react-testing-library/tree/guilherme-augusto-react-testing)_
 
 ##### Bloco 15: Gerenciamento de estado com Redux
 
-- [ ] 15-1: _Introdução ao Redux - O estado global da aplicação_
-- [ ] 15-2: _Usando o Redux no React_
+- [x] 15-1: _Introdução ao Redux - O estado global da aplicação_
+- [x] 15-2: _Usando o Redux no React_
 - [ ] 15-3: _Usando o Redux no React - Prática_
 - [ ] 15-4: _Usando o Redux no React - Actions Assíncronas_
 - [ ] 15-5: _Testes em React-Redux_
