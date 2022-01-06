@@ -42,7 +42,7 @@ class Login extends Component {
           </label>
           <button
             type="button"
-            disabled={ email.length < 3 || password.length < 3 }
+            disabled={ email.length < 5 || password.length < 5 }
             onClick={ ()=> logIn() }
           >
             Join

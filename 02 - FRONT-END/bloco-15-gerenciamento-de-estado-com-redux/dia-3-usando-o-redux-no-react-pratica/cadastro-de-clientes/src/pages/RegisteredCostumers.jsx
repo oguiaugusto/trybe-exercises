@@ -5,17 +5,23 @@ import { Link } from 'react-router-dom';
 class RegisteredCostumers extends Component {
   render() {
     const { props: { costumers } } = this;
-
-    if (costumers.length === 0) return (
-      <div className="registered-costumers-page">
-        <h1>No customer registered</h1>
-        <Link to="">Register</Link>
-      </div>
-    );
-
+    
     return (
       <div className="registered-costumers-app">
-        costumers
+        {costumers.length === 0 ? (
+          <h1>No customer registered</h1>
+          ) : (
+          <ul>
+            {costumers.map((c, i) => (
+              <li key={ `costumer-${i}` }>
+                <p>{`Name: ${c.name}`}</p>
+                <p>{`Age: ${c.age}`}</p>
+                <p>{`Email: ${c.email}`}</p>
+              </li>
+            ))}
+          </ul>
+        )}
+        <Link to="/register">Register</Link>
       </div>
     );
   }

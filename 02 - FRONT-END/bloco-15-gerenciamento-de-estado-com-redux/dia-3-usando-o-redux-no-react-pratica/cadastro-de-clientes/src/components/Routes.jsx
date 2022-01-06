@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
-import { Home, Login, RegisteredCostumers, LoginError } from '../pages';
+import { Home, Login, RegisteredCostumers, Register, LoginError } from '../pages';
 
 class Routes extends Component {
   render() {
@@ -10,6 +10,9 @@ class Routes extends Component {
       <Switch>
         {loggedIn ? (
           <Route exact path="/registered-costumers" component={ RegisteredCostumers } />
+        ) : null}
+        {loggedIn ? (
+          <Route exact path="/register" component={ Register } />
         ) : null}
         <Route exact path="/login" component={ Login } />
         <Route exact path="/" component={ Home } />
