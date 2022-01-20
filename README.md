@@ -118,11 +118,11 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 15-3: _Usando o Redux no React - Prática_
 - [x] 15-4: _Usando o Redux no React - Actions Assíncronas_
 - [x] 15-5: _Testes em React-Redux_
-- [ ] 15-6: _[Projeto - Trybe Wallet]()_
+- [x] 15-6: _[Projeto - Trybe Wallet](https://github.com/tryber/sd-016-a-project-trybewallet/tree/guilherme-augusto-trybewallet)_
 
 ##### Bloco 16: Projeto Jogo de Trivia
 
-- [ ] 16-1: _[Projeto - Jogo de Trivia]()_
+- [x] 16-1: _[Projeto - Jogo de Trivia](https://github.com/tryber/sd-016-a-project-trivia-react-redux/tree/main-group-12-product)_
 
 ##### Bloco 17: Context API e React Hooks
 
