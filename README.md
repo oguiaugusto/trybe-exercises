@@ -129,15 +129,22 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 17-1: _Context API do React_
 - [x] 17-2: _React Hooks - useState e useContext_
 - [x] 17-3: _React Hooks - useEffect e Hooks customizados_
-- [ ] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
+- [x] 17-4: _[Projeto - StarWars Planet Search com Context API e Hooks](https://github.com/tryber/sd-016-a-project-starwars-planets-search/tree/guilherme-augusto-starwars)_
 
 ##### Bloco 18: Projeto App de Receitas
 
-- [ ] 18-1: _[Projeto - App de Receitas]()_
+- [x] 18-1: _[Projeto - App de Receitas](https://github.com/tryber/sd-016-a-project-recipes-app/tree/main-group-20)_
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
-##### Bloco 20: Introdução - Bancos de dados relacionais
+##### Bloco 19: Docker: Utilizando Containers
+
+- [x] 19-1: _Utilizando Containers - Docker_
+- [ ] 19-2: _Manipulação e Criação de Imagens no Docker_
+- [ ] 19-3: _Orquestrando Containers com Docker Compose_
+- [ ] 19-4: _[Projeto - Docker Todo-List]()_
+
+##### Bloco 20: Introdução à SQL
 
 - [ ] 20-1: _Banco de dados SQL_
 - [ ] 20-2: _Encontrando dados em um banco de dados_
