@@ -8,7 +8,8 @@
     "start": "node index.js",
     "imc": "node ./services/imc.js",
     "velocidade": "node ./services/velocidade.js",
-    "sorteio": "node ./services/sorteio.js"
+    "sorteio": "node ./services/sorteio.js",
+    "fatorial": "node ./services/fatorial.js"
   },
   "keywords": [],
   "author": "Guilherme Augusto",
