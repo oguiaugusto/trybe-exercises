@@ -1,0 +1,14 @@
+** Exportar dump pelo console:
+
+  -- Básico:
+mysqldump -u (usuario) -p (banco de dados) > (nome do arquivo)
+
+  -- Somente a estrutura
+mysqldump -u (usuario) -p --no-data (banco de dados) > (nome do arquivo)
+
+  -- Somente os dados
+mysqldump -u (usuario) -p --no-create-info (banco de dados) > (nome do arquivo)
+
+** Importar dump pelo console:
+
+mysql -u (usuario) -p (banco de dados) < (nome do arquivo)
