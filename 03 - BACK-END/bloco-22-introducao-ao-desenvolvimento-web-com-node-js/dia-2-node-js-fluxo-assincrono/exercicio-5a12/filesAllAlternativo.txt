@@ -1,0 +1,1 @@
+Finalmente nao estou usando Promise.all !!!
