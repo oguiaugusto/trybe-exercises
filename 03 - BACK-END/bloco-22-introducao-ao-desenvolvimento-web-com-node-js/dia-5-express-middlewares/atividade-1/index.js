@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const userRoutes = require('./routes/userRoutes');
 const btcRoutes = require('./routes/btcRoutes');
 const postsRoutes = require('./routes/postsRoutes');
+const teamsRoutes = require('./routes/teamsRoutes');
 const errorMiddleware = require('./middlewares/errorMiddleware');
 
 const app = express();
@@ -11,6 +12,7 @@ app.use(bodyParser.json());
 app.use('/user', userRoutes);
 app.use('/btc', btcRoutes);
 app.use('/posts', postsRoutes);
+app.use('/teams', teamsRoutes);
 
 app.all('*', (_req, _res, next) => {
   const error = new Error;
