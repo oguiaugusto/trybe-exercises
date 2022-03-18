@@ -15,6 +15,11 @@ router.post(
   (_req, res) => res.status(201).json({ message: 'user created' })
 );
 
-router
+router.post(
+  '/login',
+  validateEmail,
+  validatePassword,
+  (_req, res) => res.status(200).json({ token: '86567349784e' })
+);
 
 module.exports = router;
