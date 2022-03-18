@@ -1,5 +1,3 @@
-const express = require('express');
-
 const validateUsername = (req, res, next) => {
   const { username } = req.body;
 
