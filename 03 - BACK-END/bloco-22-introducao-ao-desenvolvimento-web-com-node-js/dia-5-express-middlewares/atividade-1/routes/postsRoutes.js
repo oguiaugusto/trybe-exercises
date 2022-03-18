@@ -11,4 +11,9 @@ router.get('/:id', (req, res) => {
   return res.status(200).json(post);
 });
 
+router.get('/', (_req, res) => {
+  if (!posts || posts.length === 0) return res.status(200).json({ posts: [] });
+  return res.status(200).json(posts);
+});
+
 module.exports = router;
