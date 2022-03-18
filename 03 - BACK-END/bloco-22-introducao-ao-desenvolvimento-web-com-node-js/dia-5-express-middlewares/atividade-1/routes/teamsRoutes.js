@@ -4,7 +4,7 @@ const {
   validateInitials,
   validateCountry,
 } = require('../middlewares/validateTeamsMiddleware');
-const { writeTeams } = require('../services/readAndWriteTeams');
+const { readTeams, writeTeams } = require('../services/readAndWriteTeams');
 
 const router = express.Router();
 
@@ -19,5 +19,12 @@ router.post(
     return res.status(201).json(teams);
   }
 );
+
+router.get('/', async (req, res) => {
+  const teams = await readTeams();
+
+  if (teams.length === 0) return res.status(200).json({ teams: [] });
+  return res.status(200).json(teams)
+});
 
 module.exports = router;

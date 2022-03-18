@@ -25,4 +25,4 @@ const writeTeams = async (content) => {
   }
 };
 
-module.exports = { writeTeams };
+module.exports = { readTeams, writeTeams };
