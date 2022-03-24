@@ -81,4 +81,16 @@ app.get('/user/:id', async (req, res) => {
   return res.status(200).json(user);
 });
 
+app.put('/user/:id', async (req, res) => {
+  const { firstName, lastName, email, password } = req.body;
+
+  const user = await User.findById(req.params.id);
+  if (!user) return res.status(404).json({ message: 'User not found' });
+
+  if (!User.isValid(firstName, lastName, email, password)) return res.status(400).json({ message: 'Invalid data' });
+  await User.edit(req.params.id, firstName, lastName, email, password);
+
+  return res.status(200).json({ id: req.params.id, firstName, lastName, email, password });
+});
+
 app.listen(PORT, () => console.log(`Listening on port ${PORT}!`));

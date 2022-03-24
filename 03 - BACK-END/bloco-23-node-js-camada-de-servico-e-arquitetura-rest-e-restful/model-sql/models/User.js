@@ -26,9 +26,15 @@ const findById = async (id) => {
   return user[0];
 };
 
+const edit = async (id, firstName, lastName, email, password) => connection.execute(
+  'UPDATE users SET first_name = ?, last_name = ?, email = ?, password = ? WHERE id = ?',
+  [firstName, lastName, email, password, id],
+);
+
 module.exports = {
   isValid,
   create,
   getAll,
   findById,
+  edit,
 }
