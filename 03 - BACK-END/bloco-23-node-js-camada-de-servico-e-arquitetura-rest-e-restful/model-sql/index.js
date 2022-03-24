@@ -4,6 +4,7 @@ const PORT = 3001;
 
 const Author = require('./models/Author');
 const Book = require('./models/Book');
+const User = require('./models/User');
 
 app.use(express.json());
 
@@ -56,6 +57,16 @@ app.post('/books', async (req, res) => {
 
   await Book.create(title, author_id);
   return res.status(200).json({ message: 'Book created successfully' });
+});
+
+// Exercícios
+app.post('/user', async (req, res) => {
+  const { firstName, lastName, email, password } = req.body;
+
+  if (!User.isValid(firstName, lastName, email, password)) return res.status(400).json({ message: 'Invalid data' });
+  const id = await User.create(firstName, lastName, email, password);
+
+  return res.status(201).json({ id, firstName, lastName, email, password });
 });
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}!`));
