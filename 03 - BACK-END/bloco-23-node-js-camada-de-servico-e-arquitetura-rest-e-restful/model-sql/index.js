@@ -69,4 +69,9 @@ app.post('/user', async (req, res) => {
   return res.status(201).json({ id, firstName, lastName, email, password });
 });
 
+app.get('/user', async (req, res) => {
+  const users = await User.getAll();
+  return res.status(200).json(users);
+});
+
 app.listen(PORT, () => console.log(`Listening on port ${PORT}!`));

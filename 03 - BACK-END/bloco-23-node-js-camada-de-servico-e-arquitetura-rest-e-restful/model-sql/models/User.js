@@ -13,7 +13,14 @@ const create = async (firstName, lastName, email, password) => {
   return insertId;
 };
 
+const getAll = async () => {
+  const [users] = await connection.execute('SELECT * FROM users');
+
+  return users;
+};
+
 module.exports = {
   isValid,
   create,
+  getAll,
 }
