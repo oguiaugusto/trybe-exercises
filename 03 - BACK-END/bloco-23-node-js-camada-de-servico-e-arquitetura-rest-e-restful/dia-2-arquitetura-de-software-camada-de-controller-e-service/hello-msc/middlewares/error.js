@@ -4,6 +4,7 @@ module.exports = (err, _req, res, _next) => {
   const statusByCode = {
     notFound: 404,
     alreadyExists: 409,
+    conflict: 409,
   };
   const status = statusByCode[err.code];
 
