@@ -28,8 +28,24 @@ const create = async (firstName, middleName, lastName, birthday, nationality) =>
   };
 };
 
+const getByName = async (firstName, middleName, lastName) => {
+  let query = 'SELECT * FROM authors ';
+  query += middleName ? (
+    'WHERE first_name = ? AND middle_name = ? AND last_name = ?'
+  ) : (
+    'WHERE first_name = ? AND last_name = ?'
+  );
+
+  const params = middleName ? [firstName, middleName, lastName] : [firstName, lastName];
+  const [author] = await connection.execute(query, params);
+
+  if (author.length === 0) return null;
+  return author;
+};
+
 module.exports = {
   getAll,
   getById,
   create,
+  getByName,
 };

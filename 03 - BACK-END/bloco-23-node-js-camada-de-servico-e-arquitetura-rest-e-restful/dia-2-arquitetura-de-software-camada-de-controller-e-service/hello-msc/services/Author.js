@@ -9,8 +9,6 @@ const serialize = (authors) => authors.map((a) => ({
   nationality: a.nationality,
 }));
 
-const isValid = (...fields) => fields.every((f) => f && typeof f === 'string');
-
 const getAll = async () => {
   const authors = await Author.getAll();
   return serialize(authors);
@@ -19,12 +17,15 @@ const getAll = async () => {
 const getById = async (id) => {
   const author = await Author.getById(id);
 
-  if (!author) return author;
+  if (!author) return { error: { code: 'notFound', message: `Author with id ${id} not found` } };
   return serialize(author)[0];
 };
 
 const create = async (firstName, middleName = null, lastName, birthday = null, nationality = null) => {
-  if (!isValid(firstName, lastName)) return false;
+  const existingAuthor = await Author.getByName(firstName, middleName, lastName);
+  if (existingAuthor) {
+    return { error: { code: 'alreadyExists', message: 'There is already an author with this full name' } };
+  }
 
   const author = await Author.create(firstName, middleName, lastName, birthday, nationality);
   return author;
