@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -5,7 +6,7 @@ const errorMiddleware = require('./middlewares/error');
 const Author = require('./controllers/Author');
 const Books = require('./controllers/Books');
 
-const PORT = 3001;
+const PORT = process.env.PORT;
 
 const app = express();
 app.use(bodyParser.json());
