@@ -1,4 +1,5 @@
 const cepModel = require('../models/cepModel');
+const viaCepApi = require('../models/viaCepApi');
 
 const errors = {
   invalidCep: { error: { code: 400, message: 'CEP inválido' } },
@@ -17,9 +18,15 @@ const getAddress = async (cep) => {
   if (!isValidCep(cep)) return errors.invalidCep;
 
   cep = normalizeCep(cep);
-  const address = await cepModel.getAddress(cep);
+  let address = await cepModel.getAddress(cep);
   
-  if (!address) return errors.notFoundCep;
+  if (!address) {
+    const apiAddress = await viaCepApi.getAddress(cep);
+    if (!apiAddress || apiAddress.erro) return errors.notFoundCep;
+
+    const { logradouro, bairro, localidade, uf } = apiAddress;
+    address = await cepModel.create(cep, logradouro, bairro, localidade, uf);
+  }
   return address;
 };
 
