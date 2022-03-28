@@ -3,38 +3,44 @@ const ProductModel = require('../models/productModel');
 
 const router = express.Router();
 
-router.get('/list-products', async (req, res, next) => {
+router.get('/', async (_req, res) => {
   const products = await ProductModel.getAll();
 
-  res.send(products);
+  return res.status(200).json(products);
 });
 
-router.get('/get-by-id/:id', async (req, res, next) => {
+router.get('/:id', async (req, res) => {
   const product = await ProductModel.getById(req.params.id);
 
-  res.send(product);
+  if (!product) return res.status(404).json({ message: 'Product not found' });
+  return res.status(200).json(product);
 });
 
-router.post('/add-user', async (req, res) => {
+router.post('/', async (req, res) => {
   const { name, brand } = req.body;
 
   const newProduct = await ProductModel.add(name, brand);
+  if (newProduct.error) return res.status(400).json({ message: newProduct.error.message });
 
-  res.send(newProduct);
+  return res.status(201).json(newProduct);
 });
 
-router.post('/delete-user/:id', async (req, res) => {
-  const products = await ProductModel.exclude(req.params.id);
+router.delete('/:id', async (req, res) => {
+  const product = await ProductModel.exclude(req.params.id);
 
-  res.send(products);
+  if (!product) return res.status(400).json({ message: "Id not found" });
+  if (product.error) return res.status(400).json({ message: newProduct.error.message });
+
+  return res.status(200).json(products);
 });
 
-router.post('/update-user/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   const { name, brand } = req.body;
 
-  const products = await ProductModel.update(req.params.id, name, brand);
+  const product = await ProductModel.update(req.params.id, name, brand);
+  if (product.error) return res.status(400).json({ message: product.error.message });
 
-  res.send(products);
+  return res.status(200).json(product);
 });
 
 module.exports = router;
