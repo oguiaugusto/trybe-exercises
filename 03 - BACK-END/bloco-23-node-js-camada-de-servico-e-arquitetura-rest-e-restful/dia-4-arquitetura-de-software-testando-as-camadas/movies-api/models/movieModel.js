@@ -17,7 +17,7 @@ const create = async ({ title, directedBy, releaseYear }) => {
 const getById = async (id) => {
   const [movie] = await connection.execute('SELECT * FROM movies WHERE id = ?', [id]);
 
-  if (!movie) return null;
+  if (!movie || movie.length === 0) return null;
   return movie;
 };
 
