@@ -18,7 +18,7 @@ const getById = async (id) => {
   const [movie] = await connection.execute('SELECT * FROM movies WHERE id = ?', [id]);
 
   if (!movie || movie.length === 0) return null;
-  return movie;
+  return movie[0];
 };
 
 module.exports = {

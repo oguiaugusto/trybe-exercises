@@ -48,12 +48,12 @@ describe('teste movieModel.js', () => {
     });
     describe('quando encontra um filme com o id requisitado', () => {
       before(async () => {
-        const execute = [{ id: 1, ...movieExample }];
+        const execute = [[{ id: 1, ...movieExample }]];
         sinon.stub(connection, 'execute').resolves(execute);
       });
       after(() => connection.execute.restore());
 
-      it('retorna o objeto do filme enviado ao banco de dados', async () => {
+      it.only('retorna o objeto do filme enviado ao banco de dados', async () => {
         const res = await movieModel.getById(1);
         const expectedReturn = { id: 1, ...movieExample };
 
