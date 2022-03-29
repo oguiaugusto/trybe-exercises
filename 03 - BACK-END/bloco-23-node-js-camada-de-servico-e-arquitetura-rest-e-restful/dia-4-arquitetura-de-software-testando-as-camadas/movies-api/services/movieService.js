@@ -4,7 +4,7 @@ const isValid = {
   title: (title) => !title || title.length < 1 || typeof title !== 'string',
   directedBy: (directedBy) => !directedBy || directedBy.length < 1 || typeof directedBy !== 'string',
   releaseYear: (releaseYear) => !releaseYear || typeof releaseYear !== 'number',
-  id: (id) => typeof id !== 'number',
+  id: (id) => isNaN(id),
 };
 
 const isAllValid = (title, directedBy, releaseYear) => (
