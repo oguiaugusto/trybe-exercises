@@ -11,6 +11,7 @@ module.exports = {
       fullName: {
         type: Sequelize.STRING,
         allowNull: false,
+        field: 'full_name',
       },
       email: {
         type: Sequelize.STRING,
@@ -18,11 +19,13 @@ module.exports = {
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        field: 'created_at',
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        field: 'updated_at',
       }
     });
   },
