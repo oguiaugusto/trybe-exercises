@@ -28,11 +28,25 @@ router.get('/:id', async (req, res) => {
     return res.status(200).json(book);
   } catch (error) {
     console.log(error);
-    return getSomethingWentWrong();
+    return getSomethingWentWrong(res);
   }
 });
 
-// router.post('/', async (req, res) => {});
+router.post('/', async (req, res) => {
+  try {
+    const { title, author, pageQuantity } = req.body;
+    const createdAt = new Date().toJSON().slice(0, 19).replace('T', ' ');
+    const createdBook = await Book.create(
+      { title, author, pageQuantity, createdAt },
+      ['title', 'author', 'page_quantity', 'created_at'],
+    );
+
+    return res.status(201).json(createdBook);
+  } catch (error) {
+    console.log(error);
+    return getSomethingWentWrong(res);
+  }
+});
 
 // router.post('/:id', async (req, res) => {});
 
