@@ -64,6 +64,16 @@ router.post('/:id', async (req, res) => {
   }
 });
 
-// router.delete('/:id', async (req, res) => {});
+router.delete('/:id', async (req, res) => {
+  try {
+    const deleted = await Book.destroy({ where: { id: req.params.id } });
+
+    if (!deleted) return res.status(404).json({ message: messages.bookNotFound });
+    return res.status(200).end();
+  } catch (error) {
+    console.log(error);
+    return getSomethingWentWrong();
+  }
+});
 
 module.exports = router;
