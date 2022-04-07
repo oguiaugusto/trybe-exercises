@@ -4,7 +4,9 @@ const { Sequelize } = require('sequelize');
 const { Address, Employee, Book, User } = require('./models');
 const config = require('./config/config');
 
-const sequelize = new Sequelize(config.development);
+const sequelize = new Sequelize(
+  process.env.NODE_ENV === 'test' ? config.test : config.development
+);
 
 const app = express();
 app.use(express.json());
@@ -109,7 +111,7 @@ app.post('/employees', async (req, res) => {
         { transaction },
       );
 
-      return res.status(201).json({ message: 'Cadastrado com sucesso' });
+      return res.status(201).json({ id: employee.id, message: 'Cadastrado com sucesso' });
     });
     console.log(result);
   } catch (e) {
