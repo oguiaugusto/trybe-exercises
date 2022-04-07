@@ -48,7 +48,21 @@ router.post('/', async (req, res) => {
   }
 });
 
-// router.post('/:id', async (req, res) => {});
+router.post('/:id', async (req, res) => {
+  try {
+    const { title, author, pageQuantity } = req.body;
+    const createdAt = new Date().toJSON().slice(0, 19).replace('T', ' ');
+
+    const book = { title, author, pageQuantity, createdAt };
+    const [updated] = await Book.update(book, { where: { id: req.params.id } });
+
+    if (!updated) return res.status(404).json({ message: messages.bookNotFound });
+    return res.status(201).json(book);
+  } catch (error) {
+    console.log(error);
+    return getSomethingWentWrong(res);
+  }
+});
 
 // router.delete('/:id', async (req, res) => {});
 
