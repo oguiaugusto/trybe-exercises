@@ -12,7 +12,12 @@ const getSomethingWentWrong = (res) => res.status(500).json({ message: messages.
 
 router.get('/', async (_req, res) => {
   try {
-    const books = await Book.findAll();
+    const books = await Book.findAll({
+      order: [
+        ['title', 'ASC'],
+        ['created_at', 'ASC'],
+      ],
+    });
 
     return res.status(200).json(books);
   } catch (error) {
