@@ -1,5 +1,6 @@
 const express = require('express');
 const { Book } = require('../models');
+const { Op } = require('sequelize');
 
 const router = express.Router();
 
@@ -13,6 +14,21 @@ router.get('/', async (_req, res) => {
   try {
     const books = await Book.findAll();
 
+    return res.status(200).json(books);
+  } catch (error) {
+    console.log(error);
+    return getSomethingWentWrong(res);
+  }
+});
+
+router.get('/search', async (req, res) => {
+  try {
+    const query = `%${req.query.author}%`;
+    const books = await Book.findAll({
+      where: { author: { [Op.like]: query } }
+    });
+
+    if (!books || books.length === 0) return res.status(404).json({ message: messages.bookNotFound });
     return res.status(200).json(books);
   } catch (error) {
     console.log(error);
