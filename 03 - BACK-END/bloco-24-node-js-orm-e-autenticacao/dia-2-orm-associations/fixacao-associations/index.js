@@ -19,14 +19,26 @@ app.get('/employees', async (_req, res) => {
 
 app.get('/employees/:id', async (req, res) => {
   try {
-    const { id } = req.params;
-    const employee = await Employee.findOne({
-        where: { id },
-        include: [{ model: Address, as: 'addresses', attributes: { exclude: ['number'] } }],
-      });
+    const { params: { id }, query: { includeAddresses } } = req;
+    // const employee = await Employee.findOne({
+    //     where: { id },
+    //     include: [{ model: Address, as: 'addresses', attributes: { exclude: ['number'] } }],
+    //   });
 
+    const employee = await Employee.findOne({ where: { id } });
     if (!employee)
       return res.status(404).json({ message: 'Funcionário não encontrado' });
+    
+    if (includeAddresses === 'true') {
+      const addresses = await Address.findAll({ where: { employeeId: id } });
+      return res.status(200).json({ employee, addresses });
+    }
+
+    // Outra possível solução para colocar duas opções em um mesmo endpoint
+    // const options = includeAddresses === 'true' ? (
+    //   { where: { id }, include: [{ model: Address, as: 'addresses' }] }
+    // ) : ({ where: { id } });
+    // const employee = await Employee.findOne(options);
 
     return res.status(200).json(employee);
   } catch (e) {
