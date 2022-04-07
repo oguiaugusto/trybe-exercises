@@ -1,8 +1,13 @@
 // index.js
 const express = require('express');
+const { Sequelize } = require('sequelize');
 const { Address, Employee, Book, User } = require('./models');
+const config = require('./config/config');
+
+const sequelize = new Sequelize(config.development);
 
 const app = express();
+app.use(express.json());
 
 app.get('/employees', async (_req, res) => {
   try {
@@ -59,6 +64,54 @@ app.get('/userbooks/:id', async (req, res) => {
       return res.status(404).json({ message: 'Usuário não encontrado' });
 
     return res.status(200).json(user);
+  } catch (e) {
+    console.log(e.message);
+    res.status(500).json({ message: 'Algo deu errado' });
+  }
+});
+
+// Unmanaged transaction example
+// app.post('/employees', async (req, res) => {
+//   const transaction = await sequelize.transaction();
+//   try {
+//     const { firstName, lastName, age, city, street, number } = req.body;
+
+//     const employee = await Employee.create(
+//       { firstName, lastName, age },
+//       { transaction },
+//     );
+//     await Address.create(
+//       { city, street, number, employeeId: employee.id },
+//       { transaction },
+//     );
+
+//     await transaction.commit();
+//     return res.status(201).json({ message: 'Cadastrado com sucesso' });
+//   } catch (e) {
+//     await transaction.rollback();
+//     console.log(e.message);
+//     res.status(500).json({ message: 'Algo deu errado' });
+//   }
+// });
+
+// Managed transaction example
+app.post('/employees', async (req, res) => {
+  try {
+    const { firstName, lastName, age, city, street, number } = req.body;
+
+    const result = await sequelize.transaction(async (transaction) => {
+      const employee = await Employee.create(
+        { firstName, lastName, age },
+        { transaction },
+      );
+      await Address.create(
+        { city, street, number, employeeId: employee.id },
+        { transaction },
+      );
+
+      return res.status(201).json({ message: 'Cadastrado com sucesso' });
+    });
+    console.log(result);
   } catch (e) {
     console.log(e.message);
     res.status(500).json({ message: 'Algo deu errado' });
