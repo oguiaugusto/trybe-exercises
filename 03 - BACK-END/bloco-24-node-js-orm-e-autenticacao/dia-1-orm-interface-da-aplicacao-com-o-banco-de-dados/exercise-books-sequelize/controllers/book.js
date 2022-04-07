@@ -4,7 +4,8 @@ const { Book } = require('../models');
 const router = express.Router();
 
 const messages = {
-  somethingWentWrong: 'Something went wrong!'
+  somethingWentWrong: 'Something went wrong!',
+  bookNotFound: 'Book not found!',
 };
 const getSomethingWentWrong = (res) => res.status(500).json({ message: messages.somethingWentWrong });
 
@@ -19,7 +20,17 @@ router.get('/', async (_req, res) => {
   }
 });
 
-// router.get('/:id', async (req, res) => {});
+router.get('/:id', async (req, res) => {
+  try {
+    const book = await Book.findByPk(req.params.id);
+
+    if (!book) return res.status(404).json({ message: messages.bookNotFound });
+    return res.status(200).json(book);
+  } catch (error) {
+    console.log(error);
+    return getSomethingWentWrong();
+  }
+});
 
 // router.post('/', async (req, res) => {});
 
