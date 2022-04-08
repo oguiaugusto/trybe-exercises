@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Barcelona",
+    "initials": "FCB",
+    "country": "Espanha",
+    "league": "La Liga"
+  },
+  {
+    "name": "Paris Saint German",
+    "initials": "PSG",
+    "country": "França",
+    "league": "Ligue 1"
+  },
+  {
+    "name": "Real Madrid",
+    "initials": "RM",
+    "country": "Espanha",
+    "league": "La Liga"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "name": "my-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "imc": "node ./services/imc.js",
+    "velocidade": "node ./services/velocidade.js",
+    "sorteio": "node ./services/sorteio.js",
+    "fatorial": "node ./services/fatorial.js",
+    "fibonacci": "node ./services/fibonacci.js"
+  },
+  "keywords": [],
+  "author": "Guilherme Augusto",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}

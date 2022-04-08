@@ -33,7 +33,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 4-2: _JavaScript - Array e loop For_
 - [x] 4-3: _JavaScript - Lógica de Programação e Algoritmos_
 - [x] 4-4: _JavaScript - Objetos e funções_
-- [x] 4-5: _[Projeto - Playground Functions](https://github.com/tryber/sd-016-a-project-playground-functions/tree/guilherme-augusto-playground-functions)_
+- [x] 4-5: _[Projeto - Playground Functions](https://github.com/oguiaugusto/playground-functions)_
 
 ##### Bloco 5: JavaScript: DOM, Eventos e Web Storage
 
@@ -41,11 +41,11 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 5-2: _JavaScript - Trabalhando com elementos_
 - [x] 5-3: _JavaScript - Eventos_
 - [x] 5-4: _JavaScript - Web Storage_
-- [x] 5-5: _[Projeto - Arte com Pixels](https://github.com/tryber/sd-016-a-project-pixels-art/tree/guilherme-augusto-pixels-art)_
+- [x] 5-5: _[Projeto - Arte com Pixels](https://github.com/oguiaugusto/pixels-art)_
 - [x] 5-6: _[Projeto - Lista de tarefas](https://github.com/tryber/sd-016-a-project-todo-list/tree/guilherme-augusto-to-do-list-project)_
-- [x] 5-7: _[Projeto - Meme Generator](https://github.com/tryber/sd-016-a-project-meme-generator/tree/guilherme-augusto-meme-generator)_
-- [x] 5-7: _[Projeto - Adivinhe a Cor](https://github.com/tryber/sd-016-a-project-color-guess/tree/guilherme-augusto-project-color-guess)_
-- [x] 5-7: _[Projeto - Carta Misteriosa](https://github.com/tryber/sd-016-a-project-mistery-letter/tree/guilherme-augusto-mistery-letter)_
+- [x] 5-7: _[Projeto - Meme Generator](https://github.com/oguiaugusto/meme-generator)_
+- [x] 5-7: _[Projeto - Adivinhe a Cor](https://github.com/oguiaugusto/color-guess)_
+- [x] 5-7: _[Projeto - Carta Misteriosa](https://github.com/oguiaugusto/mystery-letter)_
 
 ##### Bloco 6: HTML e CSS: Forms, Flexbox e Responsivo
 
@@ -97,7 +97,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [x] 12-1: _Ciclo de vida de componentes_
 - [x] 12-2: _React Router_
-- [x] 12-3: _[Projeto - TrybeTunes](https://github.com/tryber/sd-016-a-project-trybetunes/tree/guilherme-augusto-trybetunes)_
+- [x] 12-3: _[Projeto - TrybeTunes](https://github.com/oguiaugusto/trybe-tunes)_
 
 ##### Bloco 13: Metodologias Ágeis
 
@@ -133,7 +133,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 18: Projeto App de Receitas
 
-- [x] 18-1: _[Projeto - App de Receitas](https://github.com/tryber/sd-016-a-project-recipes-app/tree/main-group-20)_
+- [x] 18-1: _[Projeto - App de Receitas](https://github.com/oguiaugusto/recipes-app)_
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
@@ -150,104 +150,98 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 20-2: _Encontrando dados em um banco de dados_
 - [x] 20-3: _Filtrando dados de forma específica_
 - [x] 20-4: _Manipulando tabelas_
-- [x] 20-5: _[Projeto - All For One](https://github.com/tryber/sd-016-a-mysql-all-for-one/tree/guilherme-augusto-mysql-all-for-one)_
+- [x] 20-5: _[Projeto - All For One](https://github.com/oguiaugusto/mysql-all-for-one)_
 
-##### Bloco 21: Bancos de dados relacionais
+##### Bloco 21: Funções SQL, JOINs e Normalização
 
 - [x] 21-1: _Funções mais usadas no SQL_
-- [ ] 21-2: _Descomplicando JOINs e UNIONs_
-- [ ] 21-3: _Stored Routines & Subqueries_
-- [ ] 21-4: _[Projeto - Vocabulary Booster]()_
+- [x] 21-2: _Descomplicando JOINs e UNIONs_
+- [x] 21-3: _T ransformando ideias em um modelo de banco de dados_
+- [x] 21-4: _[Aula ao vivo + Projeto - One For All](https://github.com/tryber/sd-016-a-mysql-one-for-all/tree/guilherme-augusto-mysql-one-for-all)_
 
 ##### Bloco 22: Bancos de dados relacionais
 
-- [ ] 22-1: _Transformando ideias em um modelo de banco de dados_
-- [ ] 22-2: _Normalização, Formas Normais e Dumps_
-- [ ] 22-2: _Transformando ideias em um modelo de banco de dados - Parte 2_
-- [ ] 22-3: _[Projeto - One For All]()_
+- [x] 22-1: _Node.js - Um motor JavaScript_
+- [x] 22-2: _Node.js - Fluxo Assíncrono_
+- [x] 22-3: _Mocha, Chai e Sinon - Testes de Back-end com Node.js_
+- [x] 22-4: _Express - HTTP com Node.js_
+- [x] 22-5: _Express - Middlewares_
+- [x] 22-6: _[Projeto - Talker Manager](https://github.com/oguiaugusto/talker-manager)_
 
-##### Bloco 23: Introdução - NoSQL
+##### Bloco 23: Node.js: Camada de Serviço e Arquitetura Rest e Restful
 
-- [ ] 23-1: _MongoDB - Introdução_
-- [ ] 23-2: _Filter Operators_
-- [ ] 23-3: _[Projeto - Data Flights]()_
+- [x] 23-1: _Arquitetura de Software - Camada de Model_
+- [x] 23-2: _Arquitetura de Software - Camada de Controller e Service_
+- [x] 23-3: _Arquitetura Web - Rest e Restful_
+- [x] 23-4: _Arquitetura de Software - Testando as Camadas_
+- [x] 23-5: _[Projeto - Store Manager](https://github.com/oguiaugusto/store-manager)_
 
-##### Bloco 24: Updates
+##### Bloco 24: Node.js: ORM e Autenticação
 
-- [ ] 24-1: _Updates Simples_
-- [ ] 24-2: _Updates Complexos - Arrays - Parte 1_
-- [ ] 24-3: _Updates Complexos - Arrays - Parte 2_
-- [ ] 24-4: _[Projeto - Commerce]()_
+- [x] 24-1: _ORM - Interface da aplicação com o banco de dados_
+- [x] 24-2: _ORM - Associations_
+- [x] 24-3: _JWT - (JSON Web Token)_
+- [x] 24-4: _Testando APIs com Testes de Integração_
+- [ ] 24-5: _[Projeto - API de Blogs]()_
 
-##### Bloco 25: Aggregation Framework
+##### Bloco 25: Deployment
 
-- [ ] 25-1: _Aggregation Framework - Part 1_
-- [ ] 25-2: _Aggregation Framework - Part 2_
-- [ ] 25-3: _[Projeto - Aggregations]()_
+- [ ] 25-1: _Infraestrutura - Deploy com Heroku_
+- [ ] 25-2: _Deploy Docker & Heroku_
+- [ ] 25-3: _[Projeto - Stranger Things]()_
 
-##### Bloco 26: Intro - NodeJS
+##### Bloco 26: TypeScript
 
-- [ ] 26-1: _NodeJS - Introdução_
-- [ ] 26-2: _NodeJS - Fluxo Assíncrono_
-- [ ] 26-3: _NodeJS - Arquitetura_
-- [ ] 26-4: _[Projeto - A CLI of Ice and Fire]()_
+- [ ] 26-1: _Introdução ao TypeScript_
+- [ ] 26-2: _Tipagem Estática e Generics_
+- [ ] 26-3: _Express com TypeScript_
+- [ ] 26-4: _[Projeto - Trybe Smith]()_
 
-##### Bloco 27: NodeJS
+##### Bloco 27: Programação Orientada a Objetos (POO) e SOLID
 
-- [ ] 27-1: _Express: HTTP com Node.js_
-- [ ] 27-2: _Arquitetura de Software - Introdução ao MVC_
-- [ ] 27-3: _[Projeto - Cookmaster]()_
+- [ ] 27-1: _Introdução à Orientação a Objetos_
+- [ ] 27-2: _Herança e Interfaces_
+- [ ] 27-3: _Polimorfismo_
+- [ ] 27-4: _SOLID - Introdução e Princípios S, O e D_
+- [ ] 27-5: _SOLID - Princípios L e I_
+- [ ] 27-6: _[Projeto - Trybers and Dragons]()_
 
-##### Bloco 28: NodeJS
+##### Bloco 28: Projeto - TFC - Trybe Futebol Clube
 
-- [ ] 28-1: _Arquitetura de Software - Camada de ServiÃ§o_
-- [ ] 28-2: _Arquitetura web - Rest e Restful_
-- [ ] 28-3: _[Projeto - Store Manager]()_
+- [ ] 28-1: _[Projeto - TFC - Trybe Futebol Clube]()_
 
-##### Bloco 29: NodeJS
+##### Bloco 29: Introdução ao MongoDB
 
-- [ ] 29-1: _NodeJS - JWT - (JSON Web Token)_
-- [ ] 29-2: _NodeJS - Upload de arquivos com Multer_
-- [ ] 29-3: _[Projeto - Cookmaster V2]()_
+- [ ] 29-1: _MongoDB - Introdução_
+- [ ] 29-2: _Filter Operators_
+- [ ] 29-3: _Operadores de consulta_
+- [ ] 29-4: _Updates Simples_
+- [ ] 29-5: _Updates Complexos - Arrays_
+- [ ] 29-6: _[Projeto - Commerce]()_
 
 ##### Bloco 30: Introdução - Deploy
 
-- [ ] 30-1: _Infraestrutura - Deploy com Heroku_
-- [ ] 30-2: _Deploy - Gerenciadores de Processos_
-- [ ] 30-3: _[Projeto - Stranger Things]()_
+- [ ] 30 - ?
 
-##### Bloco 31: Projeto
+##### Bloco 31: MasterClass - VPS, CI/CD
 
-- [ ] 31-1: _[Projeto - Trybeer]()_
+- [ ] 31-1: _Dia 1_
+- [ ] 31-2: _Dia 2_
 
-##### Bloco 32: Arquitetura de Software
+##### Bloco 32: Projeto - App de Delivery
 
-- [ ] 32-1: _Arquitetura - Princípios SOLID_
-- [ ] 32-2: _ORM - Interface da aplicação com o banco de dados_
-- [ ] 32-3: _Arquitetura de Software - DDD_
-- [ ] 32-4: _Boas práticas na escrita de testes_
-- [ ] 32-3: _[Projeto - API de Blogs]()_
-
-##### Bloco 33: Sockets
-
-- [ ] 30-1: _Sockets - TCP/UDP & NET_
-- [ ] 30-2: _Sockets - Socket.io_
-- [ ] 30-3: _[Projeto - Webchat]()_
-
-##### Bloco 34: Projeto
-
-- [ ] 34-1: _[Projeto - Trybeer V2]()_
+- [ ] 32-1: _[Projeto - App de Delivery]()_
 
 ## Ciência da Computação :hourglass_flowing_sand:
 
-##### Bloco 35: Introdução - Ciência da Computação
+##### Bloco 33: Introdução - Ciência da Computação
 
 - [ ] 35-1: _Arquitetura de Computadores_
 - [ ] 35-2: _Arquitetura de redes_
 - [ ] 35-3: _Redes de computadores, ferramentas e seguranÃ§a_
 - [ ] 35-4: _[Projeto - Explorando os protocolos]()_
 
-##### Bloco 36: Python
+##### Bloco 34: Python
 
 - [ ] 35-1: _Aprendendo Python_
 - [ ] 35-2: _Testes e Exceções_
