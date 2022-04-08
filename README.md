@@ -33,7 +33,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 4-2: _JavaScript - Array e loop For_
 - [x] 4-3: _JavaScript - Lógica de Programação e Algoritmos_
 - [x] 4-4: _JavaScript - Objetos e funções_
-- [x] 4-5: _[Projeto - Playground Functions](https://github.com/tryber/sd-016-a-project-playground-functions/tree/guilherme-augusto-playground-functions)_
+- [x] 4-5: _[Projeto - Playground Functions](https://github.com/oguiaugusto/playground-functions)_
 
 ##### Bloco 5: JavaScript: DOM, Eventos e Web Storage
 
@@ -41,11 +41,11 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 5-2: _JavaScript - Trabalhando com elementos_
 - [x] 5-3: _JavaScript - Eventos_
 - [x] 5-4: _JavaScript - Web Storage_
-- [x] 5-5: _[Projeto - Arte com Pixels](https://github.com/tryber/sd-016-a-project-pixels-art/tree/guilherme-augusto-pixels-art)_
+- [x] 5-5: _[Projeto - Arte com Pixels](https://github.com/oguiaugusto/pixels-art)_
 - [x] 5-6: _[Projeto - Lista de tarefas](https://github.com/tryber/sd-016-a-project-todo-list/tree/guilherme-augusto-to-do-list-project)_
-- [x] 5-7: _[Projeto - Meme Generator](https://github.com/tryber/sd-016-a-project-meme-generator/tree/guilherme-augusto-meme-generator)_
-- [x] 5-7: _[Projeto - Adivinhe a Cor](https://github.com/tryber/sd-016-a-project-color-guess/tree/guilherme-augusto-project-color-guess)_
-- [x] 5-7: _[Projeto - Carta Misteriosa](https://github.com/tryber/sd-016-a-project-mistery-letter/tree/guilherme-augusto-mistery-letter)_
+- [x] 5-7: _[Projeto - Meme Generator](https://github.com/oguiaugusto/meme-generator)_
+- [x] 5-7: _[Projeto - Adivinhe a Cor](https://github.com/oguiaugusto/color-guess)_
+- [x] 5-7: _[Projeto - Carta Misteriosa](https://github.com/oguiaugusto/mystery-letter)_
 
 ##### Bloco 6: HTML e CSS: Forms, Flexbox e Responsivo
 
@@ -171,17 +171,17 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ##### Bloco 23: Node.js: Camada de Serviço e Arquitetura Rest e Restful
 
 - [x] 23-1: _Arquitetura de Software - Camada de Model_
-- [ ] 23-2: _Arquitetura de Software - Camada de Controller e Service_
-- [ ] 23-3: _Arquitetura Web - Rest e Restful_
-- [ ] 23-4: _Arquitetura de Software - Testando as Camadas_
-- [ ] 23-5: _[Projeto - Store Manager]()_
+- [x] 23-2: _Arquitetura de Software - Camada de Controller e Service_
+- [x] 23-3: _Arquitetura Web - Rest e Restful_
+- [x] 23-4: _Arquitetura de Software - Testando as Camadas_
+- [x] 23-5: _[Projeto - Store Manager](https://github.com/oguiaugusto/store-manager)_
 
 ##### Bloco 24: Node.js: ORM e Autenticação
 
-- [ ] 24-1: _ORM - Interface da aplicação com o banco de dados_
-- [ ] 24-2: _ORM - Associations_
-- [ ] 24-3: _JWT - (JSON Web Token)_
-- [ ] 24-4: _Testando APIs com Testes de Integração_
+- [x] 24-1: _ORM - Interface da aplicação com o banco de dados_
+- [x] 24-2: _ORM - Associations_
+- [x] 24-3: _JWT - (JSON Web Token)_
+- [x] 24-4: _Testando APIs com Testes de Integração_
 - [ ] 24-5: _[Projeto - API de Blogs]()_
 
 ##### Bloco 25: Deployment
