@@ -25,3 +25,16 @@ export function squareArea(side: number): number {
 export function rectangleArea(base: number, height: number):number {
   return base * height;
 };
+
+export function rhombusArea(majorDiagonal: number, minorDiagonal: number): number {
+  return (majorDiagonal * minorDiagonal) / 2;
+};
+
+export function trapezoidArea(majorBase: number, minorBase: number, height: number): number {
+  return ((majorBase + minorBase) * height) / 2;
+};
+
+export function circleArea(radius:number): number {
+  const PI:number = 3.14;
+  return PI * (radius ** 2);
+};
