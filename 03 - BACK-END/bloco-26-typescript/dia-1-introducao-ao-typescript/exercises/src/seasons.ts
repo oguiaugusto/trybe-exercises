@@ -51,7 +51,7 @@ const hemishphereSeasons: HemisphereSeasons = {
   },
 };
 
-function seasons(): void {
+function main(): void {
   console.log('---- Seasons -----');
 
   const months: Array<string> = Object.values(Months);
@@ -76,4 +76,6 @@ function seasons(): void {
   console.log(`${month}'s seasons in the ${hemishphere.toLowerCase()}ern hemisphere: ${seasons.toLowerCase()}\n`);
 }
 
-seasons();
+main();
+
+export {};
