@@ -1,3 +1,4 @@
+const shellQuestions = require('./conversionReadline');
 const units = ['km', 'hm', 'dam', 'm', 'dm', 'cm', 'mm'] as const;
 
 type Units = typeof units[number];
@@ -12,9 +13,7 @@ function convert(value: number, baseUnit: Units, conversionUnit: Units): number 
 // solução retirada do gabarito
 
 function main(): void {
-  console.log(`1000km em metros: ${convert(1000, 'km', 'm')}m`);
-  console.log(`250hm em decâmetros: ${convert(250, 'hm', 'dam')}dam`);
-  console.log(`100cm em metros: ${convert(100, 'cm', 'm')}m`);
+  shellQuestions(units, convert);
 }
 
 main();
