@@ -6,7 +6,8 @@
   "scripts": {
     "compile": "tsc && node ./dist/index.js",
     "season": "tsc && node ./dist/src/seasons.js",
-    "convert": "tsc && node ./dist/src/length.js"
+    "length": "tsc && node ./dist/src/length.js",
+    "mass": "tsc && node ./dist/src/mass.js"
   },
   "author": "",
   "license": "ISC",
