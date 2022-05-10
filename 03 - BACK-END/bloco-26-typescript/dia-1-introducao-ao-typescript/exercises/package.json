@@ -8,7 +8,8 @@
     "season": "tsc && node ./dist/src/seasons.js",
     "length": "tsc && node ./dist/src/length.js",
     "mass": "tsc && node ./dist/src/mass.js",
-    "capacity": "tsc && node ./dist/src/capacity.js"
+    "capacity": "tsc && node ./dist/src/capacity.js",
+    "area": "tsc && node ./dist/src/area.js"
   },
   "author": "",
   "license": "ISC",
