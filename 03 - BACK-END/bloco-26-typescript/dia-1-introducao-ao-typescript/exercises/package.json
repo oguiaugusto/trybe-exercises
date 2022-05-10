@@ -7,7 +7,8 @@
     "compile": "tsc && node ./dist/index.js",
     "season": "tsc && node ./dist/src/seasons.js",
     "length": "tsc && node ./dist/src/length.js",
-    "mass": "tsc && node ./dist/src/mass.js"
+    "mass": "tsc && node ./dist/src/mass.js",
+    "capacity": "tsc && node ./dist/src/capacity.js"
   },
   "author": "",
   "license": "ISC",
