@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "start": "ts-node src/index.ts",
+    "dev": "tsnd src/index.ts"
   },
   "keywords": [
     "typescript",
@@ -28,6 +30,7 @@
   "dependencies": {
     "body-parser": "1.19.0",
     "eslint-config-trybe-backend": "1.0.4",
-    "express": "4.17.1"
+    "express": "4.17.1",
+    "ts-node-dev": "^1.1.8"
   }
 }
