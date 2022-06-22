@@ -54,14 +54,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 6-3: _CSS Flexbox - Part 1_
 - [x] 6-4: _CSS Flexbox - Part 2_
 - [x] 6-5: _CSS Responsivo - Mobile First_
-- [x] 6-6: _[Projeto - Trybewarts](https://github.com/tryber/sd-016-a-project-trybewarts/tree/guilherme-augusto-trybewarts)_
+- [x] 6-6: _[Projeto - Trybewarts](https://github.com/oguiaugusto/trybewarts)_
 
 ##### Bloco 7: Introdução à JavaScript ES6 e Testes Unitários
 
 - [x] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [x] 7-2: _JavaScript ES6 - Objects_
 - [x] 7-3: _Primeiros passos em Jest_
-- [x] 7-4: _[Projeto - JavaScript Testes Unitários](https://github.com/tryber/sd-016-a-project-js-unit-tests/tree/guilherme-augusto-js-unit-tests)_
+- [x] 7-4: _[Projeto - JavaScript Testes Unitários](https://github.com/oguiaugusto/js-unit-tests)_
 
 ##### Bloco 8: Higher Order Functions do JavaScript ES6
 
@@ -70,14 +70,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 8-3: _JavaScript ES6 - Higher Order Functions - map e filter_
 - [x] 8-4: _JavaScript ES6 - Higher Order Functions - reduce_
 - [x] 8-5: _JavaScript ES6 - spread operator, rest parameter, destructuring e mais_
-- [x] 8-6: _[Projeto - Zoo functions](https://github.com/tryber/sd-016-a-project-zoo-functions/tree/guilherme-augusto-zoo-functions-project)_
+- [x] 8-6: _[Projeto - Zoo functions](https://github.com/oguiaugusto/zoo-functions)_
 
 ##### Bloco 9: Assincronicidade & Callbacks
 
 - [x] 9-1: _JavaScript Assíncrono e Callbacks_
 - [x] 9-2: _JavaScript Assíncrono - Fetch API e async/await_
 - [x] 9-3: _Jest - Testes Assíncronos_
-- [x] 9-4: _[Projeto - Shopping Cart](https://github.com/tryber/sd-016-a-project-shopping-cart/tree/guilherme-augusto-shopping-cart)_
+- [x] 9-4: _[Projeto - Shopping Cart](https://github.com/oguiaugusto/shopping-cart)_
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
 
@@ -85,13 +85,13 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [x] 10-1: _'Hello, world!' no React!_
 - [x] 10-2: _Componentes React_
-- [x] 10-3: _[Projeto - Solar System](https://github.com/tryber/sd-016-a-project-solar-system/tree/guilherme-augusto-solar-system)_
+- [x] 10-3: _[Projeto - Solar System](https://github.com/oguiaugusto/solar-system)_
 
 ##### Bloco 11: Componentes com Estado, Eventos e Formulários com React
 
 - [x] 11-1: _Components com estado_
 - [x] 11-2: _Eventos e formulários no React_
-- [x] 11-3: _[Projeto - Tryunfo](https://github.com/tryber/sd-016-a-project-tryunfo/tree/guilherme-augusto-tryunfo)_
+- [x] 11-3: _[Projeto - Tryunfo](https://github.com/oguiaugusto/tryunfo)_
 
 ##### Bloco 12: Ciclo de Vida de Componentes e React Router
 
@@ -102,14 +102,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ##### Bloco 13: Metodologias Ágeis
 
 - [x] 13-1: _Metodologias Ágeis_
-- [x] 13-2: _[Projeto - Frontend Online Store](https://github.com/tryber/sd-016-a-project-frontend-online-store/tree/main-group-16-product)_
+- [x] 13-2: _[Projeto - Frontend Online Store](https://github.com/oguiaugusto/frontend-online-store)_
 
 ##### Bloco 14: Testes automatizados com React Testing Library
 
 - [x] 14-1: _RTL - Primeiros Passos_
 - [x] 14-2: _RTL - Mocks e Inputs_
 - [x] 14-3: _RTL - Testando React Router_
-- [x] 14-4: _[Projeto - Testes em React](https://github.com/tryber/sd-016-a-project-react-testing-library/tree/guilherme-augusto-react-testing)_
+- [x] 14-4: _[Projeto - Testes em React](https://github.com/oguiaugusto/tests-in-react)_
 
 ##### Bloco 15: Gerenciamento de estado com Redux
 
@@ -118,7 +118,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 15-3: _Usando o Redux no React - Prática_
 - [x] 15-4: _Usando o Redux no React - Actions Assíncronas_
 - [x] 15-5: _Testes em React-Redux_
-- [x] 15-6: _[Projeto - Trybe Wallet](https://github.com/tryber/sd-016-a-project-trybewallet/tree/guilherme-augusto-trybewallet)_
+- [x] 15-6: _[Projeto - Trybe Wallet](https://github.com/oguiaugusto/trybewallet)_
 
 ##### Bloco 16: Projeto Jogo de Trivia
 
@@ -182,7 +182,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 24-2: _ORM - Associations_
 - [x] 24-3: _JWT - (JSON Web Token)_
 - [x] 24-4: _Testando APIs com Testes de Integração_
-- [ ] 24-5: _[Projeto - API de Blogs]()_
+- [ ] 24-5: _[Projeto - API de Blogs](https://github.com/oguiaugusto/blogs-api)_
 
 ##### Bloco 25: Deployment
 
