@@ -42,7 +42,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 5-3: _JavaScript - Eventos_
 - [x] 5-4: _JavaScript - Web Storage_
 - [x] 5-5: _[Projeto - Arte com Pixels](https://github.com/oguiaugusto/pixels-art)_
-- [x] 5-6: _[Projeto - Lista de tarefas](https://github.com/tryber/sd-016-a-project-todo-list/tree/guilherme-augusto-to-do-list-project)_
+- [x] 5-6: _[Projeto - Lista de tarefas](https://github.com/oguiaugusto/todo-list)_
 - [x] 5-7: _[Projeto - Meme Generator](https://github.com/oguiaugusto/meme-generator)_
 - [x] 5-7: _[Projeto - Adivinhe a Cor](https://github.com/oguiaugusto/color-guess)_
 - [x] 5-7: _[Projeto - Carta Misteriosa](https://github.com/oguiaugusto/mystery-letter)_
@@ -122,14 +122,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 16: Projeto Jogo de Trivia
 
-- [x] 16-1: _[Projeto - Jogo de Trivia](https://github.com/tryber/sd-016-a-project-trivia-react-redux/tree/main-group-12-product)_
+- [x] 16-1: _[Projeto - Jogo de Trivia](https://github.com/oguiaugusto/trivia-react-redux)_
 
 ##### Bloco 17: Context API e React Hooks
 
 - [x] 17-1: _Context API do React_
 - [x] 17-2: _React Hooks - useState e useContext_
 - [x] 17-3: _React Hooks - useEffect e Hooks customizados_
-- [x] 17-4: _[Projeto - StarWars Planet Search com Context API e Hooks](https://github.com/tryber/sd-016-a-project-starwars-planets-search/tree/guilherme-augusto-starwars)_
+- [x] 17-4: _[Projeto - StarWars Planet Search com Context API e Hooks](https://github.com/oguiaugusto/starwars-planets-search)_
 
 ##### Bloco 18: Projeto App de Receitas
 
@@ -142,7 +142,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 19-1: _Utilizando Containers - Docker_
 - [x] 19-2: _Manipulação e Criação de Imagens no Docker_
 - [x] 19-3: _Orquestrando Containers com Docker Compose_
-- [x] 19-4: _[Projeto - Docker Todo-List](https://github.com/tryber/sd-016-a-project-docker-todo-list/tree/guilherme-augusto-docker-todo-list)_
+- [x] 19-4: _[Projeto - Docker Todo-List](https://github.com/oguiaugusto/docker-todo-list)_
 
 ##### Bloco 20: Introdução à SQL
 
@@ -157,7 +157,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 21-1: _Funções mais usadas no SQL_
 - [x] 21-2: _Descomplicando JOINs e UNIONs_
 - [x] 21-3: _T ransformando ideias em um modelo de banco de dados_
-- [x] 21-4: _[Aula ao vivo + Projeto - One For All](https://github.com/tryber/sd-016-a-mysql-one-for-all/tree/guilherme-augusto-mysql-one-for-all)_
+- [x] 21-4: _[Aula ao vivo + Projeto - One For All](https://github.com/oguiaugusto/one-for-all)_
 
 ##### Bloco 22: Bancos de dados relacionais
 
@@ -188,14 +188,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [ ] 25-1: _Infraestrutura - Deploy com Heroku_
 - [ ] 25-2: _Deploy Docker & Heroku_
-- [ ] 25-3: _[Projeto - Stranger Things]()_
+- [ ] 25-3: _[Projeto - Stranger Things](https://github.com/oguiaugusto/stranger-things)_
 
 ##### Bloco 26: TypeScript
 
 - [ ] 26-1: _Introdução ao TypeScript_
 - [ ] 26-2: _Tipagem Estática e Generics_
 - [ ] 26-3: _Express com TypeScript_
-- [ ] 26-4: _[Projeto - Trybe Smith]()_
+- [ ] 26-4: _[Projeto - Trybe Smith](https://github.com/oguiaugusto/trybesmith)_
 
 ##### Bloco 27: Programação Orientada a Objetos (POO) e SOLID
 
@@ -204,11 +204,11 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 27-3: _Polimorfismo_
 - [ ] 27-4: _SOLID - Introdução e Princípios S, O e D_
 - [ ] 27-5: _SOLID - Princípios L e I_
-- [ ] 27-6: _[Projeto - Trybers and Dragons]()_
+- [ ] 27-6: _[Projeto - Trybers and Dragons](https://github.com/oguiaugusto/trybers-and-dragons)_
 
 ##### Bloco 28: Projeto - TFC - Trybe Futebol Clube
 
-- [ ] 28-1: _[Projeto - TFC - Trybe Futebol Clube]()_
+- [ ] 28-1: _[Projeto - TFC - Trybe Futebol Clube](https://github.com/oguiaugusto/trybe-futebol-clube)_
 
 ##### Bloco 29: Introdução ao MongoDB
 
@@ -217,7 +217,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 29-3: _Operadores de consulta_
 - [ ] 29-4: _Updates Simples_
 - [ ] 29-5: _Updates Complexos - Arrays_
-- [ ] 29-6: _[Projeto - Commerce]()_
+- [ ] 29-6: _[Projeto - Commerce](https://github.com/oguiaugusto/mongodb-commerce)_
 
 ##### Bloco 30: Introdução - Deploy
 
