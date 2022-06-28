@@ -182,42 +182,42 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 24-2: _ORM - Associations_
 - [x] 24-3: _JWT - (JSON Web Token)_
 - [x] 24-4: _Testando APIs com Testes de Integração_
-- [ ] 24-5: _[Projeto - API de Blogs](https://github.com/oguiaugusto/blogs-api)_
+- [x] 24-5: _[Projeto - API de Blogs](https://github.com/oguiaugusto/blogs-api)_
 
 ##### Bloco 25: Deployment
 
-- [ ] 25-1: _Infraestrutura - Deploy com Heroku_
-- [ ] 25-2: _Deploy Docker & Heroku_
-- [ ] 25-3: _[Projeto - Stranger Things](https://github.com/oguiaugusto/stranger-things)_
+- [x] 25-1: _Infraestrutura - Deploy com Heroku_
+- [x] 25-2: _Deploy Docker & Heroku_
+- [x] 25-3: _[Projeto - Stranger Things](https://github.com/oguiaugusto/stranger-things)_
 
 ##### Bloco 26: TypeScript
 
-- [ ] 26-1: _Introdução ao TypeScript_
-- [ ] 26-2: _Tipagem Estática e Generics_
-- [ ] 26-3: _Express com TypeScript_
-- [ ] 26-4: _[Projeto - Trybe Smith](https://github.com/oguiaugusto/trybesmith)_
+- [x] 26-1: _Introdução ao TypeScript_
+- [x] 26-2: _Tipagem Estática e Generics_
+- [x] 26-3: _Express com TypeScript_
+- [x] 26-4: _[Projeto - Trybe Smith](https://github.com/oguiaugusto/trybesmith)_
 
 ##### Bloco 27: Programação Orientada a Objetos (POO) e SOLID
 
-- [ ] 27-1: _Introdução à Orientação a Objetos_
-- [ ] 27-2: _Herança e Interfaces_
-- [ ] 27-3: _Polimorfismo_
-- [ ] 27-4: _SOLID - Introdução e Princípios S, O e D_
-- [ ] 27-5: _SOLID - Princípios L e I_
-- [ ] 27-6: _[Projeto - Trybers and Dragons](https://github.com/oguiaugusto/trybers-and-dragons)_
+- [x] 27-1: _Introdução à Orientação a Objetos_
+- [x] 27-2: _Herança e Interfaces_
+- [x] 27-3: _Polimorfismo_
+- [x] 27-4: _SOLID - Introdução e Princípios S, O e D_
+- [x] 27-5: _SOLID - Princípios L e I_
+- [x] 27-6: _[Projeto - Trybers and Dragons](https://github.com/oguiaugusto/trybers-and-dragons)_
 
 ##### Bloco 28: Projeto - TFC - Trybe Futebol Clube
 
-- [ ] 28-1: _[Projeto - TFC - Trybe Futebol Clube](https://github.com/oguiaugusto/trybe-futebol-clube)_
+- [x] 28-1: _[Projeto - TFC - Trybe Futebol Clube](https://github.com/oguiaugusto/trybe-futebol-clube)_
 
 ##### Bloco 29: Introdução ao MongoDB
 
-- [ ] 29-1: _MongoDB - Introdução_
-- [ ] 29-2: _Filter Operators_
-- [ ] 29-3: _Operadores de consulta_
-- [ ] 29-4: _Updates Simples_
-- [ ] 29-5: _Updates Complexos - Arrays_
-- [ ] 29-6: _[Projeto - Commerce](https://github.com/oguiaugusto/mongodb-commerce)_
+- [x] 29-1: _MongoDB - Introdução_
+- [x] 29-2: _Filter Operators_
+- [x] 29-3: _Operadores de consulta_
+- [x] 29-4: _Updates Simples_
+- [x] 29-5: _Updates Complexos - Arrays_
+- [x] 29-6: _[Projeto - Commerce](https://github.com/oguiaugusto/mongodb-commerce)_
 
 ##### Bloco 30: Introdução - Deploy
 
