@@ -16,6 +16,17 @@ class TournamentsController {
       next(error);
     }
   };
+
+  public findByYear = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const { year } = req.params;
+      const tournament = await this.service.findByYear(Number(year));
+
+      return res.status(200).json(tournament);
+    } catch (error) {
+      next(error);
+    }
+  };
 }
 
 export default TournamentsController;
