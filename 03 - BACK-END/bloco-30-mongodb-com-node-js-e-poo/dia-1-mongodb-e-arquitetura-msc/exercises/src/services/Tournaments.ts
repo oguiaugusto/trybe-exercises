@@ -1,4 +1,5 @@
 import TournamentsModel, { ITournamentsMethods } from '../models/Tournaments';
+import { ITournament } from '../schemas/Tournaments';
 import RequestError from '../utils/RequestError';
 
 class TournamentsService implements ITournamentsMethods {
@@ -16,6 +17,11 @@ class TournamentsService implements ITournamentsMethods {
     if (!tournament) throw new RequestError(404, 'Tournament not found');
 
     return tournament;
+  };
+
+  public create = async (tournament: ITournament) => {
+    const createdTournament = await this.model.create(tournament);
+    return createdTournament;
   };
 }
 

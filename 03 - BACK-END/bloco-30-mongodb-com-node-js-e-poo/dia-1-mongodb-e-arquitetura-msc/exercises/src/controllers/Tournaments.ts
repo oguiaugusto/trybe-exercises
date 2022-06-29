@@ -27,6 +27,16 @@ class TournamentsController {
       next(error);
     }
   };
+
+  public create = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const tournament = await this.service.create(req.body);
+
+      return res.status(201).json(tournament);
+    } catch (error) {
+      next(error);
+    }
+  };
 }
 
 export default TournamentsController;

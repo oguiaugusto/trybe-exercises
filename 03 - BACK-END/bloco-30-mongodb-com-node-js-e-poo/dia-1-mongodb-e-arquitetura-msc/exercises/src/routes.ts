@@ -7,5 +7,6 @@ const routes = Router();
 
 routes.get('/tournaments', tournamentsController.findAll);
 routes.get('/tournaments/:year', tournamentsController.findByYear);
+routes.post('/tournaments', tournamentsController.create);
 
 export default routes;
