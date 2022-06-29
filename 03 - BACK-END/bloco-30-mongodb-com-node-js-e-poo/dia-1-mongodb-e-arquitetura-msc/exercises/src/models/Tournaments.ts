@@ -5,6 +5,7 @@ export interface ITournamentsMethods {
   findAll: () => Promise<ITournament[]>;
   findByYear: (year: number) => Promise<ITournament | null>;
   create: (tournament: ITournament) => Promise<ITournament>;
+  update: (id: string, tournament: Partial<ITournament>) => Promise<ITournament | null>;
 }
 
 class TournamentsModel implements ITournamentsMethods {
@@ -25,6 +26,11 @@ class TournamentsModel implements ITournamentsMethods {
   public create = async (tournament: ITournament): Promise<ITournament> => {
     const createdTournament = await this.model.create(tournament);
     return createdTournament;
+  };
+
+  public update = async (id: string, tournament: Partial<ITournament>): Promise<ITournament | null> => {
+    const updatedTournament = await this.model.findByIdAndUpdate(id, tournament, { new: true });
+    return updatedTournament;
   };
 }
 

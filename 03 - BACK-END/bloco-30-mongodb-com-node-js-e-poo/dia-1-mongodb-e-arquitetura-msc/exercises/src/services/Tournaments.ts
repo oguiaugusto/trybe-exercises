@@ -23,6 +23,13 @@ class TournamentsService implements ITournamentsMethods {
     const createdTournament = await this.model.create(tournament);
     return createdTournament;
   };
+
+  public update = async (id: string, tournament: Partial<ITournament>) => {
+    const updatedTournament = await this.model.update(id, tournament);
+    if (!updatedTournament) throw new RequestError(404, 'Tournament not found');
+
+    return updatedTournament;
+  }
 }
 
 export default TournamentsService;

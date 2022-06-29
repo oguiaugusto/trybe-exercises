@@ -37,6 +37,17 @@ class TournamentsController {
       next(error);
     }
   };
+
+  public update = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const { id } = req.params;
+      const tournament = await this.service.update(id, req.body);
+
+      return res.status(200).json(tournament);
+    } catch (error) {
+      next(error);
+    }
+  };
 }
 
 export default TournamentsController;
