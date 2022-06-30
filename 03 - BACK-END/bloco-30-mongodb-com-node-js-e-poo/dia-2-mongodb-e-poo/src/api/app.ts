@@ -1,6 +1,8 @@
+import 'dotenv/config';
 import { NextFunction } from 'connect';
 import express, { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes'
+import connect from '../models/connection';
 
 class App {
   private express: express.Express;
@@ -10,6 +12,8 @@ class App {
     this.config();
     this.routes();
     this.errorMiddleware();
+
+    connect(process.env.MONGODB_URI);
   }
 
   private config() {
