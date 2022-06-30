@@ -48,6 +48,17 @@ class TournamentsController {
       next(error);
     }
   };
+
+  public remove = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const { id } = req.params;
+      await this.service.remove(id);
+
+      return res.status(204).end();
+    } catch (error) {
+      next(error);
+    }
+  };
 }
 
 export default TournamentsController;

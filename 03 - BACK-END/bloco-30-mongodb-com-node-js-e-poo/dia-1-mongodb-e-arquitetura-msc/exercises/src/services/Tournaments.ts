@@ -29,7 +29,14 @@ class TournamentsService implements ITournamentsMethods {
     if (!updatedTournament) throw new RequestError(404, 'Tournament not found');
 
     return updatedTournament;
-  }
+  };
+
+  public remove = async (id: string) => {
+    const removedTournament = await this.model.remove(id);
+    if (!removedTournament) throw new RequestError(404, 'Tournament not found');
+
+    return removedTournament;
+  };
 }
 
 export default TournamentsService;
