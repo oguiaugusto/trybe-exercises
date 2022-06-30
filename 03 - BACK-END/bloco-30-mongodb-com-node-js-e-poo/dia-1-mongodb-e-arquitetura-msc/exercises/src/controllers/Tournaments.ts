@@ -1,15 +1,25 @@
 import { NextFunction, Request, Response } from 'express';
 import { ITournamentsMethods } from '../models/Tournaments';
+import { ITournament } from '../schemas/Tournaments';
 import TournamentsService from '../services/Tournaments';
+import RequestError from '../utils/RequestError';
 
 class TournamentsController {
   constructor(
     private service: ITournamentsMethods = new TournamentsService()
   ) {}
 
-  public findAll = async (_req: Request, res: Response, next: NextFunction) => {
+  public findAll = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const tournaments = await this.service.findAll();
+      let tournaments: ITournament[];
+      const { runnerUp } = req.query;
+
+      if (runnerUp) {
+        if (typeof runnerUp !== 'string') throw new RequestError(422, '"runnerUp" must be a string');
+        tournaments = await this.service.findByRunnerUp(runnerUp);
+      } else {
+        tournaments = await this.service.findAll();
+      }
 
       return res.status(200).json(tournaments);
     } catch (error) {

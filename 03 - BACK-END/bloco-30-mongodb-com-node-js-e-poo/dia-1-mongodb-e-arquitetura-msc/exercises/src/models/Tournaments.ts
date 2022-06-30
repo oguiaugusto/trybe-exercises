@@ -7,6 +7,7 @@ export interface ITournamentsMethods {
   create: (tournament: ITournament) => Promise<ITournament>;
   update: (id: string, tournament: Partial<ITournament>) => Promise<ITournament | null>;
   remove: (id: string) => Promise<ITournament | null>;
+  findByRunnerUp: (runnerUp: string) => Promise<ITournament[]>;
 }
 
 class TournamentsModel implements ITournamentsMethods {
@@ -37,7 +38,14 @@ class TournamentsModel implements ITournamentsMethods {
   public remove = async (id: string): Promise<ITournament | null> => {
     const removedTournament = await this.model.findByIdAndDelete(id);
     return removedTournament;
-  }
+  };
+
+  public findByRunnerUp = async (runnerUp: string): Promise<ITournament[]> => {
+    const regex = new RegExp(`${runnerUp}`, 'ig');
+    const tournaments = await this.model.find({ runnerUp: { $regex: regex } });
+
+    return tournaments;
+  };
 }
 
 export default TournamentsModel;
