@@ -14,4 +14,4 @@ def insertion_sort(numbers):
     return numbers
 
 numbers = [7, 5, 9, 2, 6, 8]
-print(insertion_sort(numbers))
+# print(insertion_sort(numbers))
