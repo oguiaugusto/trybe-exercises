@@ -3,5 +3,8 @@ class Node:
         self.value = value  # 🎲 Dado a ser armazenado
         self.next = None  # 👉 Forma de apontar para outro nó
 
-    def __str__(self):
+    def __repr__(self):
         return f"Node(value={self.value}, next={self.next})"
+
+    def __str__(self):
+        return self.__repr__()
