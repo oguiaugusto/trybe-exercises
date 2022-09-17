@@ -109,3 +109,16 @@ class LinkedList:
             returned_value = Node(returned_value.value)
 
         return returned_value
+
+    def index_of(self, value):
+        current_value = self.head
+        index = 0
+
+        while index < len(self):
+            if current_value.value == value:
+                return index
+
+            current_value = current_value.next
+            index += 1
+
+        return -1
