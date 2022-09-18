@@ -41,6 +41,12 @@ class Stack():
     def clear(self):
         self._data.clear()
 
+    def min_value(self):
+        if self.is_empty():
+            return None
+
+        return min(self._data)
+
 
 if __name__ == "__main__":
     elements = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
